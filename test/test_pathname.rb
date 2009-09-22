@@ -88,7 +88,6 @@ class PathNameTest < Test::Unit::TestCase # :nodoc:
   end
 
   def test_cleanpath
-
     assert_equal('/', Path::Name.new('/').cleanpath(true).to_s)
     assert_equal('/', Path::Name.new('//').cleanpath(true).to_s)
     assert_equal('', Path::Name.new('').cleanpath(true).to_s)
@@ -242,7 +241,6 @@ class PathNameTest < Test::Unit::TestCase # :nodoc:
     assert_pathname_plus('a', 'a', '.')
     assert_pathname_plus('b', '.', 'b')
     assert_pathname_plus('.', '.', '.')
-    assert_pathname_plus('/b', 'a', '/b')
 
     assert_pathname_plus('/', '/', '..')
     assert_pathname_plus('.', 'a', '..')
@@ -252,6 +250,9 @@ class PathNameTest < Test::Unit::TestCase # :nodoc:
     assert_pathname_plus('c', 'a', '../c')
     assert_pathname_plus('a/c', 'a/b', '../c')
     assert_pathname_plus('../../c', '..', '../c')
+
+    # TODO: Is this really what we want?
+    assert_pathname_plus('/b', 'a', '/b')
   end
 
   def test_taint

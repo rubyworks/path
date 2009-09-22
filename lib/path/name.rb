@@ -1,22 +1,24 @@
+#--
+# = path/name.rb
+#
+# Object-Oriented Pathname Class
+#
+# Author:: Tanaka Akira <akr@m17n.org>
+# Documentation:: Author and Gavin Sinclair
+#
+# For documentation, see class Pathname.
+#
+# <tt>pathname.rb</tt> is distributed with Ruby since 1.8.0.
+#
+# THIS IS AN IMPROVED VERSION THAT USES AN ARRAY INSTEAD OF A STRING FOR PATH.
+#
+# A modified version of Pathname that uses an array internal rather then a string.
+# This gave ~20% performance boot. Unfortunately no one cared.
+#++
+
 module Path
+  require 'path/list'
 
-  # = path/name.rb
-  #
-  # Object-Oriented Pathname Class
-  #
-  # Author:: Tanaka Akira <akr@m17n.org>
-  # Documentation:: Author and Gavin Sinclair
-  #
-  # For documentation, see class Pathname.
-  #
-  # <tt>pathname.rb</tt> is distributed with Ruby since 1.8.0.
-  #
-  # THIS IS AN IMPROVED VERSION THAT USES AN ARRAY INSTEAD OF A STRING FOR PATH.
-  #
-  # A modified version of Pathname that uses an array internal rather then a string.
-  # This gave ~20% performance boot. Unfortunately no one cared.
-
-  #
   # == Path::Name
   #
   # Path::Name represents a pathname which locates a file in a filesystem.
@@ -228,9 +230,19 @@ module Path
       self.taint if path.tainted?
     end
 
-    def freeze() super; @path.freeze; self end
-    def taint() super; @path.taint; self end
-    def untaint() super; @path.untaint; self end
+    def freeze()  super ; @path.freeze  ; self end
+    def taint()   super ; @path.taint   ; self end
+    def untaint() super ; @path.untaint ; self end
+
+    # Convertion method for path names. This returns self.
+    def to_path
+      self
+    end
+
+    #
+    def [](*globs)
+      Path::List.new(self)[*globs]
+    end
 
     # Stores the array of the componet parts of the pathname.
     #
@@ -520,7 +532,8 @@ module Path
     # This method doesn't access the file system; it is pure string manipulation.
     #
     def +(other)
-      File.join( to_s,other )
+      path = self.class.new(File.join(to_s, other.to_s))
+      path.cleanpath
 
       #other = Path::Name.new(other) unless Path::Name === other
       #return other if other.absolute?
@@ -551,6 +564,9 @@ module Path
   #      Path::Name.new(path1 + '/' + path2)
   #    end
     end
+
+    #
+    alias_method :/, :+      #/ kate highlight fix
 
     #
     # Path::Name#join joins pathnames.
@@ -656,6 +672,44 @@ module Path
       end
     end
 
+    #
+    def rootname
+      # this should be fairly robust
+      path_re = Regexp.new('[' + Regexp.escape(File::Separator + %q{\/}) + ']')
+      head, tail = path.split(path_re, 2)
+      return '.' if path == head
+      return '/' if head.empty?
+      self.class.new(head)
+    end
+
+    # Calls the _block_ for every successive parent directory of the
+    # directory path until the root (absolute path) or +.+ (relative path)
+    # is reached.
+    def ascend(inclusive=false,&block) # :yield:
+      cur_dir = self
+      yield( cur_dir.cleanpath ) if inclusive
+      until cur_dir.root? or cur_dir == self.class.new(".")
+        cur_dir = cur_dir.parent
+        yield cur_dir
+      end
+    end
+
+    # Calls the _block_ for every successive subdirectory of the
+    # directory path from the root (absolute path) until +.+
+    # (relative path) is reached.
+    def descend()
+      @path.scan(%r{[^/]*/?})[0...-1].inject('') do |path, dir|
+        yield self.class.new(path << dir)
+        path
+      end
+    end
+
+    #
+    def split_root
+      path_re = Regexp.new('[' + Regexp.escape(File::Separator + %q{\/}) + ']')
+      head, tail = *path.split(path_re, 2)
+      [self.class.new(head), self.class.new(tail)]
+    end
   end
 
 
@@ -806,6 +860,9 @@ module Path
     # See <tt>FileTest.directory?</tt>.
     def directory?() FileTest.directory?(path) end
 
+    # Like directory? but return self if true, otherwise nil.
+    def dir? ; directory? ? self : nil ; end
+
     # See <tt>FileTest.file?</tt>.
     def file?() FileTest.file?(path) end
 
@@ -907,6 +964,38 @@ module Path
     def opendir(&block) # :yield: dir
       Dir.open(path, &block)
     end
+
+    #
+    def glob(match, *opts)
+      flags = 0
+      opts.each do |opt|
+        case opt when Symbol, String
+          flags += ::File.const_get("FNM_#{opt}".upcase)
+        else
+          flags += opt
+        end
+      end
+      Dir.glob(::File.join(self.to_s, match), flags).collect{ |m| self.class.new(m) }
+    end
+
+    #
+    def glob_first(match, *opts)
+      flags = 0
+      opts.each do |opt|
+        case opt when Symbol, String
+          flags += ::File.const_get("FNM_#{opt}".upcase)
+        else
+          flags += opt
+        end
+      end
+      file = ::Dir.glob(::File.join(self.to_s, match), flags).first
+      file ? self.class.new(file) : nil
+    end
+
+    #
+    def empty?
+      Dir.glob(::File.join(self.to_s, '*')).empty?
+    end
   end
 
 
@@ -949,6 +1038,16 @@ module Path
       FileUtils.rm_r(path)
       nil
     end
+
+    #
+    def uptodate?(*sources)
+      ::FileUtils.uptodate?(to_s, sources.flatten)
+    end
+
+    #
+    def outofdate?(*sources)
+      ! uptodate?(*sources)
+    end
   end
 
 
@@ -977,5 +1076,72 @@ module Path
     end
   end
 
+  class Path::Name  # extensions
+
+    # Alternate to Pathname#new.
+    #
+    #   Pathname['/usr/share']
+    #
+    def self.[](path)
+      new(path)
+    end
+
+    # Active path separator.
+    #
+    #   p1 = Pathname.new('/')
+    #   p2 = p1 / 'usr' / 'share'   #=> Pathname:/usr/share
+    #
+    def self./(path) #/
+      new(path)
+    end
+
+    # Root constant for building paths from root directory onward.
+    def self.root
+      self.class.new('/')
+    end
+
+    # Home constant for building paths from root directory onward.
+    #
+    # TODO: Pathname#home needs to be more robust.
+    #
+    def self.home
+      self.class.new('~')
+    end
+
+    # Work constant for building paths from root directory onward.
+    #
+    def self.work
+      self.class.new('.')
+    end
+
+    # Platform dependent null device.
+    #
+    def self.null
+      case RUBY_PLATFORM
+      when /mswin/i
+        'NUL'
+      when /amiga/i
+        'NIL:'
+      when /openvms/i
+        'NL:'
+      else
+        '/dev/null'
+      end
+    end
+
+  end
+
 end
 
+class String
+  def to_path
+    Path::Name.new(self)
+  end
+end
+
+class NilClass
+  # Provide platform dependent null path.
+  def to_path
+    Path::Name.null
+  end
+end

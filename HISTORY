@@ -1,0 +1,14 @@
+= RELEASE HISTORY
+
+== 1.0.0 // 2009-09-22
+
+This is the initial stand-alone release of Path, a collection
+of Path-related classes partially spun-off from Ruby Facets
+and briefly called Folio.
+
+Changes:
+
+* 1 Major Enhancement
+
+    * Happy Birthday!
+

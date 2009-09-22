@@ -11,13 +11,13 @@ module Path
     end
 
     #
-    def [*entries]
+    def [](*entries)
       entries.each do |entry|
         case entry
         when Pathname
           push(@local + entry)
         else
-          concat(Dir.glob(@local + entry).map{ |f| Pathname.new(f) )
+          concat(Dir.glob(@local + entry).map{ |f| Pathname.new(f) })
         end
       end
       return self
@@ -77,8 +77,8 @@ module Path
     def identical?(other)
       all?{ |path| FileTest.identical?(path, other)  }
     end
-    alias_method :compare_file; :identical?
-    alias_method :cmp; :identical?
+    alias_method :compare_file, :identical?
+    alias_method :cmp, :identical?
 
 
     #############
@@ -260,7 +260,7 @@ module Path
     #def method_missing(s, *a, &b)
     #  entries.map do |e|
     #    e.__send__(s, *a, &b)
-    #  end 
+    #  end
     #end
 
   private

@@ -1,16 +1,8 @@
-= Path::Name
+require 'path/name'
 
-  require 'path/name'
+testcase Path::Name do
 
-== initialize
-
-  p1 = Path::Name.new('a')
-  p1.to_s.assert == 'a'
-
-  p2 = Path::Name.new(p1)
-  p1.assert == p2
-
-== equality
+  # Support Classes
 
   class AnotherStringLike # :nodoc:
     def initialize(s) @s = s end
@@ -18,62 +10,77 @@
     def ==(other) @s == other end
   end
 
-  obj = Path::Name.new("a")
-  str = "a"
-  sym = :a
-  ano = AnotherStringLike.new("a")
+  testunit :initialize do
+    p1 = Path::Name.new('a')
+    p1.to_s.assert == 'a'
 
-  obj.assert == str
-  str.assert == obj
-  obj.assert == ano
-  ano.assert == obj
-  obj.assert == sym
-  sym.assert == obj
-
-  obj2 = Path::Name.new("a")
-  obj.assert == obj2
-  obj.assert === obj2
-  obj.assert.eql? obj2
-
-== hashkey
-
-  h = {}
-  h[Path::Name.new("a")] = 1
-  h[Path::Name.new("a")] = 2
-  assert_equal(1, h.size)
-
-== compare (#<=>)
-
-=== against Path::Name
-
-  def assert_pathname_cmp(e, s1, s2)
-    p1 = Path::Name.new(s1)
-    p2 = Path::Name.new(s2)
-    r = p1 <=> p2
-    assert(e == r,
-      "#{p1.inspect} <=> #{p2.inspect}: <#{e}> expected but was <#{r}>")
+    p2 = Path::Name.new(p1)
+    p1.assert == p2
   end
 
-  assert_pathname_cmp( 0, "a", "a")
-  assert_pathname_cmp( 1, "b", "a")
-  assert_pathname_cmp(-1, "a", "b")
-  ss = %w(
-    a
-    a/
-    a/b
-    a.
-    a0
-  )
-  s1 = ss.shift
-  ss.each {|s2|
-    assert_pathname_cmp(-1, s1, s2)
-    s1 = s2
-  }
+  testunit :==, :===, :eql? do
+    obj = Path::Name.new("a")
+    str = "a"
+    sym = :a
+    ano = AnotherStringLike.new("a")
 
-=== with String
+    obj.assert == str
+    str.assert == obj
+    obj.assert == ano
+    ano.assert == obj
+    obj.assert == sym
+    sym.assert == obj
 
-  (Path::Name.new("a") <=> "a").assert.nil?
-  ("a" <=> Path::Name.new("a")).assert.nil?
+    obj2 = Path::Name.new("a")
+    obj.assert == obj2
+    obj.assert === obj2
+    obj.assert.eql? obj2
+  end
+
+  testunit :hash do
+    h = {}
+    h[Path::Name.new("a")] = 1
+    h[Path::Name.new("a")] = 2
+    h.size.assert == 1
+  end
+
+  testunit :<=> do
+
+    testsect "vs. Path::Name" do
+
+      def assert_pathname_cmp(e, s1, s2)
+        p1 = Path::Name.new(s1)
+        p2 = Path::Name.new(s2)
+        r = p1 <=> p2
+        assert(e == r,
+          "#{p1.inspect} <=> #{p2.inspect}: <#{e}> expected but was <#{r}>")
+      end
+
+      assert_pathname_cmp( 0, "a", "a")
+      assert_pathname_cmp( 1, "b", "a")
+      assert_pathname_cmp(-1, "a", "b")
+      ss = %w(
+        a
+        a/
+        a/b
+        a.
+        a0
+      )
+      s1 = ss.shift
+      ss.each {|s2|
+        assert_pathname_cmp(-1, s1, s2)
+        s1 = s2
+      }
+
+    end
+
+    testsect "vs. String" do
+      (Path::Name.new("a") <=> "a").assert.nil?
+      ("a" <=> Path::Name.new("a")).assert.nil?
+    end
+
+  end
+
 
 == syntactical
 
@@ -154,7 +161,7 @@
     /   /.
     /   /..
 
-    .   . 
+    .   .
     .   ./
     .   a/../
     .   a/../.

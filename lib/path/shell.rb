@@ -13,7 +13,7 @@ module Path
   class Shell
 
     # require shell commands
-    Dir[File.dirname(__FILE__) + '/commands/*.rb'].each do |file|
+    Dir[File.dirname(__FILE__) + '/shell/*.rb'].each do |file|
       require(file) #instance_eval(File.read(file))
     end
 
