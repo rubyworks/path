@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Class: Archive::Tar::Minitar::Input</title>
+
+  <link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+  <div class="head">
+    <h1 class="class">Archive::Tar::Minitar::Input</h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../../vendor/path/minitar_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vendor/path/minitar.rb">vendor/path/minitar.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      <!-- Namespace Contents -->
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#M000386">::new</a></li>
+          
+          <li><a href="#M000385">::open</a></li>
+          
+          <li><a href="#M000390">#close</a></li>
+          
+          <li><a href="#M000387">#each</a></li>
+          
+          <li><a href="#M000388">#extract_entry</a></li>
+          
+          <li><a href="#M000391">#fsync_dir</a></li>
+          
+          <li><a href="#M000389">#tar</a></li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><span class="include">Enumerable</span></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../../../HISTORY.html">HISTORY</a></li>
+        
+          <li class="file"><a href="../../../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../../../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="../../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="module"><a href="../../../Archive.html">Archive</a></li>
+        
+          <li class="module"><a href="../../../Archive/Tar.html">Archive::Tar</a></li>
+        
+          <li class="module"><a href="../../../Archive/Tar/Minitar.html">Archive::Tar::Minitar</a></li>
+        
+          <li class="class"><a href="../../../Archive/Tar/Minitar/BlockRequired.html">Archive::Tar::Minitar::BlockRequired</a></li>
+        
+          <li class="class"><a href="../../../Archive/Tar/Minitar/ClosedStream.html">Archive::Tar::Minitar::ClosedStream</a></li>
+        
+          <li class="class"><a href="../../../Archive/Tar/Minitar/FileNameTooLong.html">Archive::Tar::Minitar::FileNameTooLong</a></li>
+        
+          <li class="class"><a href="../../../Archive/Tar/Minitar/Input.html">Archive::Tar::Minitar::Input</a></li>
+        
+          <li class="class"><a href="../../../Archive/Tar/Minitar/NonSeekableStream.html">Archive::Tar::Minitar::NonSeekableStream</a></li>
+        
+          <li class="class"><a href="../../../Archive/Tar/Minitar/Output.html">Archive::Tar::Minitar::Output</a></li>
+        
+          <li class="class"><a href="../../../Archive/Tar/Minitar/Reader.html">Archive::Tar::Minitar::Reader</a></li>
+        
+          <li class="class"><a href="../../../Archive/Tar/Minitar/Reader/EntryStream.html">Archive::Tar::Minitar::Reader::EntryStream</a></li>
+        
+          <li class="module"><a href="../../../Archive/Tar/Minitar/Reader/InvalidEntryStream.html">Archive::Tar::Minitar::Reader::InvalidEntryStream</a></li>
+        
+          <li class="class"><a href="../../../Archive/Tar/Minitar/UnexpectedEOF.html">Archive::Tar::Minitar::UnexpectedEOF</a></li>
+        
+          <li class="class"><a href="../../../Archive/Tar/Minitar/Writer.html">Archive::Tar::Minitar::Writer</a></li>
+        
+          <li class="class"><a href="../../../Archive/Tar/Minitar/Writer/BoundedStream.html">Archive::Tar::Minitar::Writer::BoundedStream</a></li>
+        
+          <li class="class"><a href="../../../Archive/Tar/Minitar/Writer/BoundedStream/FileOverflow.html">Archive::Tar::Minitar::Writer::BoundedStream::FileOverflow</a></li>
+        
+          <li class="class"><a href="../../../Archive/Tar/Minitar/Writer/RestrictedStream.html">Archive::Tar::Minitar::Writer::RestrictedStream</a></li>
+        
+          <li class="class"><a href="../../../Archive/Tar/PosixHeader.html">Archive::Tar::PosixHeader</a></li>
+        
+          <li class="module"><a href="../../../Path.html">Path</a></li>
+        
+          <li class="class"><a href="../../../Path/Emailer.html">Path::Emailer</a></li>
+        
+          <li class="class"><a href="../../../Path/List.html">Path::List</a></li>
+        
+          <li class="class"><a href="../../../Path/Name.html">Path::Name</a></li>
+        
+          <li class="class"><a href="../../../Path/Shell.html">Path::Shell</a></li>
+        
+          <li class="module"><a href="../../../Folio.html">Folio</a></li>
+        
+          <li class="module"><a href="../../../Folio/XDG.html">Folio::XDG</a></li>
+        
+          <li class="module"><a href="../../../Ratch.html">Ratch</a></li>
+        
+          <li class="class"><a href="../../../Ratch/Console.html">Ratch::Console</a></li>
+        
+          <li class="class"><a href="../../../NilClass.html">NilClass</a></li>
+        
+          <li class="class"><a href="../../../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+
+    <div id="validator-badges">
+      Generated with <a href="http://github.com/proutils/rdazzle">Razzle Dazzle Redfish</a>.<br/>
+      <a href="http://validator.w3.org/check/referer">[Validate]</a>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      <p>
+Wraps a <a href="Reader.html">Archive::Tar::Minitar::Reader</a> with
+convenience methods and wrapped stream management; <a
+href="Input.html">Input</a> only works with random access data streams. See
+Input::new for details.
+</p>
+
+    </div>
+
+    <!-- Constants -->
+    
+
+    <!-- Attributes -->
+    
+
+    <!-- Methods -->
+    
+    <div id="public-class-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="new-method" class="method-detail ">
+        <a name="M000386"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">new</span><span
+            class="method-args">(input)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Creates a new <a href="Input.html">Input</a> object. If <tt>input</tt> is a
+stream object that responds to read), then it will simply be wrapped.
+Otherwise, one will be created and opened using Kernel#open. When <a
+href="Input.html#M000390">Input#close</a> is called, the stream object
+wrapped will be closed.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="new-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/minitar.rb, line 667</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">input</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">input</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">:read</span>)
+        <span class="ruby-ivar">@io</span> = <span class="ruby-identifier">input</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-ivar">@io</span> = <span class="ruby-identifier">open</span>(<span class="ruby-identifier">input</span>, <span class="ruby-value str">&quot;rb&quot;</span>)
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-ivar">@tarreader</span> = <span class="ruby-constant">Archive</span><span class="ruby-operator">::</span><span class="ruby-constant">Tar</span><span class="ruby-operator">::</span><span class="ruby-constant">Minitar</span><span class="ruby-operator">::</span><span class="ruby-constant">Reader</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@io</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="open-method" class="method-detail ">
+        <a name="M000385"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">open</span><span
+            class="method-args">(input)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+With no associated block, +Input::open+ is a synonym for +Input::new+. If
+the optional code block is given, it will be passed the new <em>writer</em>
+as an argument and the <a href="Input.html">Input</a> object will
+automatically be closed when the block terminates. In this instance,
++Input::open+ returns the value of the block.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="open-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/minitar.rb, line 650</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">input</span>)
+      <span class="ruby-identifier">stream</span> = <span class="ruby-constant">Input</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">input</span>)
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">stream</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+
+      <span class="ruby-keyword kw">begin</span>
+        <span class="ruby-identifier">res</span> = <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">stream</span>
+      <span class="ruby-keyword kw">ensure</span>
+        <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">close</span>
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-identifier">res</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="close-method" class="method-detail ">
+        <a name="M000390"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">close</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Closes the <a href="Reader.html">Reader</a> object and the wrapped data
+stream.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="close-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/minitar.rb, line 765</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>
+      <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">close</span>
+      <span class="ruby-ivar">@tarreader</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="each-method" class="method-detail ">
+        <a name="M000387"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">each</span><span
+            class="method-args">(&block)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Iterates through each entry and rewinds to the beginning of the stream when
+finished.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="each-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/minitar.rb, line 678</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+      <span class="ruby-ivar">@tarreader</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">entry</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">entry</span> }
+    <span class="ruby-keyword kw">ensure</span>
+      <span class="ruby-ivar">@tarreader</span>.<span class="ruby-identifier">rewind</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="extract-entry-method" class="method-detail ">
+        <a name="M000388"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">extract_entry</span><span
+            class="method-args">(destdir, entry)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Extracts the current <tt>entry</tt> to <tt>destdir</tt>. If a block is
+provided, it yields an <tt>action</tt> Symbol, the full name of the file
+being extracted (<tt>name</tt>), and a Hash of statistical information
+(<tt>stats</tt>).
+</p>
+<p>
+The <tt>action</tt> will be one of:
+</p>
+<table>
+<tr><td valign="top"><tt>:dir</tt>:</td><td>The <tt>entry</tt> is a directory.
+
+</td></tr>
+<tr><td valign="top"><tt>:file_start</tt>:</td><td>The <tt>entry</tt> is a file; the extract of the file is just beginning.
+
+</td></tr>
+<tr><td valign="top"><tt>:file_progress</tt>:</td><td>Yielded every 4096 bytes during the extract of the <tt>entry</tt>.
+
+</td></tr>
+<tr><td valign="top"><tt>:file_done</tt>:</td><td>Yielded when the <tt>entry</tt> is completed.
+
+</td></tr>
+</table>
+<p>
+The <tt>stats</tt> hash contains the following keys:
+</p>
+<table>
+<tr><td valign="top"><tt>:current</tt>:</td><td>The current total number of bytes read in the <tt>entry</tt>.
+
+</td></tr>
+<tr><td valign="top"><tt>:currinc</tt>:</td><td>The current number of bytes read in this read cycle.
+
+</td></tr>
+<tr><td valign="top"><tt>:entry</tt>:</td><td>The entry being extracted; this is a <a
+href="Reader/EntryStream.html">Reader::EntryStream</a>, with all methods
+thereof.
+
+</td></tr>
+</table>
+          
+
+          
+          <div class="method-source-code"
+            id="extract-entry-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/minitar.rb, line 703</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_entry</span>(<span class="ruby-identifier">destdir</span>, <span class="ruby-identifier">entry</span>) <span class="ruby-comment cmt"># :yields action, name, stats:</span>
+      <span class="ruby-identifier">stats</span> = {
+        <span class="ruby-identifier">:current</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-identifier">:currinc</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-identifier">:entry</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">entry</span>
+      }
+
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">directory?</span>
+        <span class="ruby-identifier">dest</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">destdir</span>, <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span>)
+
+        <span class="ruby-keyword kw">yield</span> <span class="ruby-operator">:</span><span class="ruby-identifier">dir</span>, <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span>, <span class="ruby-identifier">stats</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+
+        <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Archive</span><span class="ruby-operator">::</span><span class="ruby-constant">Tar</span><span class="ruby-operator">::</span><span class="ruby-constant">Minitar</span>.<span class="ruby-identifier">dir?</span>(<span class="ruby-identifier">dest</span>)
+          <span class="ruby-keyword kw">begin</span>
+            <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">chmod</span>(<span class="ruby-identifier">entry</span>.<span class="ruby-identifier">mode</span>, <span class="ruby-identifier">dest</span>)
+          <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span>
+            <span class="ruby-keyword kw">nil</span>
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">:mode</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">mode</span>)
+          <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">chmod</span>(<span class="ruby-identifier">entry</span>.<span class="ruby-identifier">mode</span>, <span class="ruby-identifier">dest</span>)
+        <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-identifier">fsync_dir</span>(<span class="ruby-identifier">dest</span>)
+        <span class="ruby-identifier">fsync_dir</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-value str">&quot;..&quot;</span>))
+        <span class="ruby-keyword kw">return</span>
+      <span class="ruby-keyword kw">else</span> <span class="ruby-comment cmt"># it's a file</span>
+        <span class="ruby-identifier">destdir</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">destdir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span>))
+        <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span>(<span class="ruby-identifier">destdir</span>, <span class="ruby-identifier">:mode</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0755</span>)
+
+        <span class="ruby-identifier">destfile</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">destdir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span>))
+        <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">chmod</span>(<span class="ruby-value">0600</span>, <span class="ruby-identifier">destfile</span>) <span class="ruby-keyword kw">rescue</span> <span class="ruby-keyword kw">nil</span>  <span class="ruby-comment cmt"># Errno::ENOENT</span>
+
+        <span class="ruby-keyword kw">yield</span> <span class="ruby-operator">:</span><span class="ruby-identifier">file_start</span>, <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span>, <span class="ruby-identifier">stats</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">destfile</span>, <span class="ruby-value str">&quot;wb&quot;</span>, <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">mode</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">os</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">loop</span> <span class="ruby-keyword kw">do</span>
+            <span class="ruby-identifier">data</span> = <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">4096</span>)
+            <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">data</span>
+
+            <span class="ruby-identifier">stats</span>[<span class="ruby-identifier">:currinc</span>] = <span class="ruby-identifier">os</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">data</span>)
+            <span class="ruby-identifier">stats</span>[<span class="ruby-identifier">:current</span>] <span class="ruby-operator">+=</span> <span class="ruby-identifier">stats</span>[<span class="ruby-identifier">:currinc</span>]
+
+            <span class="ruby-keyword kw">yield</span> <span class="ruby-operator">:</span><span class="ruby-identifier">file_progress</span>, <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span>, <span class="ruby-identifier">stats</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+          <span class="ruby-keyword kw">end</span>
+          <span class="ruby-identifier">os</span>.<span class="ruby-identifier">fsync</span>
+        <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">chmod</span>(<span class="ruby-identifier">entry</span>.<span class="ruby-identifier">mode</span>, <span class="ruby-identifier">destfile</span>)
+        <span class="ruby-identifier">fsync_dir</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">destfile</span>))
+        <span class="ruby-identifier">fsync_dir</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">destfile</span>), <span class="ruby-value str">&quot;..&quot;</span>))
+
+        <span class="ruby-keyword kw">yield</span> <span class="ruby-operator">:</span><span class="ruby-identifier">file_done</span>, <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span>, <span class="ruby-identifier">stats</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="tar-method" class="method-detail ">
+        <a name="M000389"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">tar</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns the <a href="Reader.html">Reader</a> object for direct access.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="tar-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/minitar.rb, line 760</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tar</span>
+      <span class="ruby-ivar">@tarreader</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+    <div id="private-instance-method-details" class="method-section section">
+      <h3 class="section-header">Private Instance Methods</h3>
+
+    
+      <div id="fsync-dir-method" class="method-detail ">
+        <a name="M000391"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">fsync_dir</span><span
+            class="method-args">(dirname)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="fsync-dir-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/minitar.rb, line 771</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fsync_dir</span>(<span class="ruby-identifier">dirname</span>)
+        <span class="ruby-comment cmt"># make sure this hits the disc</span>
+      <span class="ruby-identifier">dir</span> = <span class="ruby-identifier">open</span>(<span class="ruby-identifier">dirname</span>, <span class="ruby-value str">'rb'</span>)
+      <span class="ruby-identifier">dir</span>.<span class="ruby-identifier">fsync</span>
+    <span class="ruby-keyword kw">rescue</span> <span class="ruby-comment cmt"># ignore IOError if it's an unpatched (old) Ruby</span>
+      <span class="ruby-keyword kw">nil</span>
+    <span class="ruby-keyword kw">ensure</span>
+      <span class="ruby-identifier">dir</span>.<span class="ruby-identifier">close</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">dir</span> <span class="ruby-keyword kw">rescue</span> <span class="ruby-keyword kw">nil</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</body>
+</html>

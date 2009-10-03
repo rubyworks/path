@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Module: Folio::XDG</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+  <div class="head">
+    <h1 class="module">Folio::XDG</h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../vendor/path/xdg_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="vendor/path/xdg.rb">vendor/path/xdg.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+
+      <!-- Namespace Contents -->
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#M000257">#home</a></li>
+          
+          <li><a href="#M000270">#xdg_cache_file</a></li>
+          
+          <li><a href="#M000265">#xdg_cache_home</a></li>
+          
+          <li><a href="#M000276">#xdg_cache_work</a></li>
+          
+          <li><a href="#M000259">#xdg_config_dirs</a></li>
+          
+          <li><a href="#M000268">#xdg_config_file</a></li>
+          
+          <li><a href="#M000258">#xdg_config_home</a></li>
+          
+          <li><a href="#M000271">#xdg_config_work</a></li>
+          
+          <li><a href="#M000262">#xdg_data_dirs</a></li>
+          
+          <li><a href="#M000266">#xdg_data_file</a></li>
+          
+          <li><a href="#M000261">#xdg_data_home</a></li>
+          
+          <li><a href="#M000272">#xdg_data_work</a></li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../HISTORY.html">HISTORY</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="module"><a href="../Archive.html">Archive</a></li>
+        
+          <li class="module"><a href="../Archive/Tar.html">Archive::Tar</a></li>
+        
+          <li class="module"><a href="../Archive/Tar/Minitar.html">Archive::Tar::Minitar</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/BlockRequired.html">Archive::Tar::Minitar::BlockRequired</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/ClosedStream.html">Archive::Tar::Minitar::ClosedStream</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/FileNameTooLong.html">Archive::Tar::Minitar::FileNameTooLong</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Input.html">Archive::Tar::Minitar::Input</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/NonSeekableStream.html">Archive::Tar::Minitar::NonSeekableStream</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Output.html">Archive::Tar::Minitar::Output</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Reader.html">Archive::Tar::Minitar::Reader</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Reader/EntryStream.html">Archive::Tar::Minitar::Reader::EntryStream</a></li>
+        
+          <li class="module"><a href="../Archive/Tar/Minitar/Reader/InvalidEntryStream.html">Archive::Tar::Minitar::Reader::InvalidEntryStream</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/UnexpectedEOF.html">Archive::Tar::Minitar::UnexpectedEOF</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Writer.html">Archive::Tar::Minitar::Writer</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Writer/BoundedStream.html">Archive::Tar::Minitar::Writer::BoundedStream</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Writer/BoundedStream/FileOverflow.html">Archive::Tar::Minitar::Writer::BoundedStream::FileOverflow</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Writer/RestrictedStream.html">Archive::Tar::Minitar::Writer::RestrictedStream</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/PosixHeader.html">Archive::Tar::PosixHeader</a></li>
+        
+          <li class="module"><a href="../Path.html">Path</a></li>
+        
+          <li class="class"><a href="../Path/Emailer.html">Path::Emailer</a></li>
+        
+          <li class="class"><a href="../Path/List.html">Path::List</a></li>
+        
+          <li class="class"><a href="../Path/Name.html">Path::Name</a></li>
+        
+          <li class="class"><a href="../Path/Shell.html">Path::Shell</a></li>
+        
+          <li class="module"><a href="../Folio.html">Folio</a></li>
+        
+          <li class="module"><a href="../Folio/XDG.html">Folio::XDG</a></li>
+        
+          <li class="module"><a href="../Ratch.html">Ratch</a></li>
+        
+          <li class="class"><a href="../Ratch/Console.html">Ratch::Console</a></li>
+        
+          <li class="class"><a href="../NilClass.html">NilClass</a></li>
+        
+          <li class="class"><a href="../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+
+    <div id="validator-badges">
+      Generated with <a href="http://github.com/proutils/rdazzle">Razzle Dazzle Redfish</a>.<br/>
+      <a href="http://validator.w3.org/check/referer">[Validate]</a>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      <h1><a href="XDG.html">XDG</a> Base Directory Standard</h1>
+<p>
+This provides a conveient library for conforming to the <a
+href="XDG.html">XDG</a> Base Directory Standard.
+</p>
+<pre>
+  http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
+</pre>
+<p>
+Some important clarifications, not made clear by the above specification.
+</p>
+<p>
+The data directories are for &#8220;read-only&#8221; files. In other words
+once something is put there, it should only be read, never written to by a
+program. (Generally speaking only users or pacakge mangers should be
+adding, changing or removing files from the data locations.
+</p>
+<p>
+The config locations are where you should store files that may change, and
+effect operations depending one there content. This is like etc/ in the
+FHS, but alterable by end users and and end user programs, not just root
+and sudo admin scripts.
+</p>
+<p>
+The cache location stores files that could judt as well be deleted and
+everyihtng still works find. This is for variable and temporary files. Like
+var/ in FHS.
+</p>
+<p>
+This module returns paths as strings.
+</p>
+
+    </div>
+
+    <!-- Constants -->
+    
+
+    <!-- Attributes -->
+    
+
+    <!-- Methods -->
+    
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="home-method" class="method-detail ">
+        <a name="M000257"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">home</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="home-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/xdg.rb, line 44</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">home</span>
+      <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'HOME'</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-value str">'~'</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="xdg-cache-file-method" class="method-detail ">
+        <a name="M000270"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">xdg_cache_file</span><span
+            class="method-args">(file)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Find a file or directory in the user cache.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="xdg-cache-file-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/xdg.rb, line 104</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xdg_cache_file</span>(<span class="ruby-identifier">file</span>)
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">cache_home</span>,<span class="ruby-identifier">file</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="xdg-cache-home-method" class="method-detail ">
+        <a name="M000265"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">xdg_cache_home</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Location of user&#8217;s personal cache directory.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="xdg-cache-home-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/xdg.rb, line 81</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xdg_cache_home</span>
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(
+        <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'XDG_CACHE_HOME'</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">home</span>, <span class="ruby-value str">'.cache'</span>)
+      )
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="xdg-cache-work-method" class="method-detail ">
+        <a name="M000276"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">xdg_cache_work</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Location of working cache directory.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="xdg-cache-work-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/xdg.rb, line 130</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xdg_cache_work</span>
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(
+        <span class="ruby-comment cmt">#ENV['XDG_CACHE_WORK'] || File.join(Dir.pwd, '.cache')</span>
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">Dir</span>.<span class="ruby-identifier">pwd</span>, <span class="ruby-value str">'.cache'</span>)
+      )
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="xdg-config-dirs-method" class="method-detail ">
+        <a name="M000259"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">xdg_config_dirs</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+List of user&#8217;s shared config directories.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="xdg-config-dirs-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/xdg.rb, line 56</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xdg_config_dirs</span>
+      <span class="ruby-identifier">dirs</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'XDG_CONFIG_DIRS'</span>].<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/[:;]/</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">dirs</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">dirs</span> = <span class="ruby-node">%w{/etc/xdg}</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">dir</span>.<span class="ruby-identifier">collect</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">d</span>) }
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="xdg-config-file-method" class="method-detail ">
+        <a name="M000268"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">xdg_config_file</span><span
+            class="method-args">(file)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Find a file or directory in config dirs.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="xdg-config-file-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/xdg.rb, line 96</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xdg_config_file</span>(<span class="ruby-identifier">file</span>)
+      [<span class="ruby-identifier">config_home</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">config_dirs</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dir</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">dir</span>,<span class="ruby-identifier">file</span>)
+        <span class="ruby-keyword kw">break</span> <span class="ruby-identifier">path</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="xdg-config-home-method" class="method-detail ">
+        <a name="M000258"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">xdg_config_home</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Location of user&#8217;s personal config directory.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="xdg-config-home-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/xdg.rb, line 49</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xdg_config_home</span>
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(
+        <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'XDG_CONFIG_HOME'</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">home</span>, <span class="ruby-value str">'.config'</span>)
+      )
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="xdg-config-work-method" class="method-detail ">
+        <a name="M000271"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">xdg_config_work</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Location of working config directory.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="xdg-config-work-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/xdg.rb, line 114</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xdg_config_work</span>
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(
+        <span class="ruby-comment cmt">#ENV['XDG_CONFIG_WORK'] || File.join(Dir.pwd, '.config')</span>
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">Dir</span>.<span class="ruby-identifier">pwd</span>, <span class="ruby-value str">'.config'</span>)
+      )
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="xdg-data-dirs-method" class="method-detail ">
+        <a name="M000262"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">xdg_data_dirs</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+List of user&#8217;s shared data directores.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="xdg-data-dirs-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/xdg.rb, line 72</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xdg_data_dirs</span>
+      <span class="ruby-identifier">dirs</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'XDG_DATA_DIRS'</span>].<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/[:;]/</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">dirs</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">dirs</span> = <span class="ruby-node">%w{/usr/local/share/ /usr/share/}</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">dir</span>.<span class="ruby-identifier">collect</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">d</span>) }
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="xdg-data-file-method" class="method-detail ">
+        <a name="M000266"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">xdg_data_file</span><span
+            class="method-args">(file)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Find a file or directory in data dirs.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="xdg-data-file-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/xdg.rb, line 88</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xdg_data_file</span>(<span class="ruby-identifier">file</span>)
+      [<span class="ruby-identifier">data_home</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">data_dirs</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dir</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">dir</span>,<span class="ruby-identifier">file</span>)
+        <span class="ruby-keyword kw">break</span> <span class="ruby-identifier">path</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="xdg-data-home-method" class="method-detail ">
+        <a name="M000261"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">xdg_data_home</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Location of user&#8217;s personal data directory.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="xdg-data-home-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/xdg.rb, line 65</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xdg_data_home</span>
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(
+        <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'XDG_DATA_HOME'</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">home</span>, <span class="ruby-value str">'.local'</span>, <span class="ruby-value str">'share'</span>)
+      )
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="xdg-data-work-method" class="method-detail ">
+        <a name="M000272"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">xdg_data_work</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Location of working data directory.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="xdg-data-work-source">
+<pre>
+<span class="ruby-comment cmt"># File vendor/path/xdg.rb, line 122</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xdg_data_work</span>
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(
+        <span class="ruby-comment cmt">#ENV['XDG_DATA_WORK'] || File.join(Dir.pwd, '.share')</span>
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">Dir</span>.<span class="ruby-identifier">pwd</span>, <span class="ruby-value str">'.share'</span>)
+      )
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Class: Path::Emailer</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+  <div class="head">
+    <h1 class="class">Path::Emailer</h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/path/shell/email_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/path/shell/email.rb">lib/path/shell/email.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      <!-- Namespace Contents -->
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#M000223">::environment_options</a></li>
+          
+          <li><a href="#M000225">::new</a></li>
+          
+          <li><a href="#M000224">::new_with_environment</a></li>
+          
+          <li><a href="#M000226">#email</a></li>
+          
+          <li><a href="#M000237">#password</a></li>
+          
+          <li><a href="#M000240">#require_smtp</a></li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../HISTORY.html">HISTORY</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="module"><a href="../Archive.html">Archive</a></li>
+        
+          <li class="module"><a href="../Archive/Tar.html">Archive::Tar</a></li>
+        
+          <li class="module"><a href="../Archive/Tar/Minitar.html">Archive::Tar::Minitar</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/BlockRequired.html">Archive::Tar::Minitar::BlockRequired</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/ClosedStream.html">Archive::Tar::Minitar::ClosedStream</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/FileNameTooLong.html">Archive::Tar::Minitar::FileNameTooLong</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Input.html">Archive::Tar::Minitar::Input</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/NonSeekableStream.html">Archive::Tar::Minitar::NonSeekableStream</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Output.html">Archive::Tar::Minitar::Output</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Reader.html">Archive::Tar::Minitar::Reader</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Reader/EntryStream.html">Archive::Tar::Minitar::Reader::EntryStream</a></li>
+        
+          <li class="module"><a href="../Archive/Tar/Minitar/Reader/InvalidEntryStream.html">Archive::Tar::Minitar::Reader::InvalidEntryStream</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/UnexpectedEOF.html">Archive::Tar::Minitar::UnexpectedEOF</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Writer.html">Archive::Tar::Minitar::Writer</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Writer/BoundedStream.html">Archive::Tar::Minitar::Writer::BoundedStream</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Writer/BoundedStream/FileOverflow.html">Archive::Tar::Minitar::Writer::BoundedStream::FileOverflow</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Writer/RestrictedStream.html">Archive::Tar::Minitar::Writer::RestrictedStream</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/PosixHeader.html">Archive::Tar::PosixHeader</a></li>
+        
+          <li class="module"><a href="../Path.html">Path</a></li>
+        
+          <li class="class"><a href="../Path/Emailer.html">Path::Emailer</a></li>
+        
+          <li class="class"><a href="../Path/List.html">Path::List</a></li>
+        
+          <li class="class"><a href="../Path/Name.html">Path::Name</a></li>
+        
+          <li class="class"><a href="../Path/Shell.html">Path::Shell</a></li>
+        
+          <li class="module"><a href="../Folio.html">Folio</a></li>
+        
+          <li class="module"><a href="../Folio/XDG.html">Folio::XDG</a></li>
+        
+          <li class="module"><a href="../Ratch.html">Ratch</a></li>
+        
+          <li class="class"><a href="../Ratch/Console.html">Ratch::Console</a></li>
+        
+          <li class="class"><a href="../NilClass.html">NilClass</a></li>
+        
+          <li class="class"><a href="../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+
+    <div id="validator-badges">
+      Generated with <a href="http://github.com/proutils/rdazzle">Razzle Dazzle Redfish</a>.<br/>
+      <a href="http://validator.w3.org/check/referer">[Validate]</a>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      <p>
+<a href="Emailer.html">Emailer</a> class makes it easy send out an email.
+</p>
+<p>
+Settings:
+</p>
+<pre>
+    subject      Subject of email message.
+    from         Message FROM address [email].
+    to           Email address to send announcemnt.
+    server       Email server to route message.
+    port         Email server's port.
+    port_secure  Email server's port.
+    domain       Email server's domain name.
+    account      Email account name if needed.
+    password     Password for login..
+    login        Login type: plain, cram_md5 or login [plain].
+    secure       Uses TLS security, true or false? [false]
+    message      Mesage to send -or-
+    file         File that contains message.
+</pre>
+
+    </div>
+
+    <!-- Constants -->
+    
+
+    <!-- Attributes -->
+    
+    <div id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="password-attribute-method" class="method-detail">
+        <a name="password"></a>
+        
+        <a name="password="></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">password</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>
+Used for caching password between usages.
+</p>
+        
+        </div>
+      </div>
+      
+      <div id="server-attribute-method" class="method-detail">
+        <a name="server"></a>
+        
+        <a name="server="></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">server</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p class="missing-docs">(Not documented)</p>
+        
+        </div>
+      </div>
+      
+      <div id="port-attribute-method" class="method-detail">
+        <a name="port"></a>
+        
+        <a name="port="></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">port</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p class="missing-docs">(Not documented)</p>
+        
+        </div>
+      </div>
+      
+      <div id="account-attribute-method" class="method-detail">
+        <a name="account"></a>
+        
+        <a name="account="></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">account</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p class="missing-docs">(Not documented)</p>
+        
+        </div>
+      </div>
+      
+      <div id="passwd-attribute-method" class="method-detail">
+        <a name="passwd"></a>
+        
+        <a name="passwd="></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">passwd</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p class="missing-docs">(Not documented)</p>
+        
+        </div>
+      </div>
+      
+      <div id="login-attribute-method" class="method-detail">
+        <a name="login"></a>
+        
+        <a name="login="></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">login</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p class="missing-docs">(Not documented)</p>
+        
+        </div>
+      </div>
+      
+      <div id="secure-attribute-method" class="method-detail">
+        <a name="secure"></a>
+        
+        <a name="secure="></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">secure</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p class="missing-docs">(Not documented)</p>
+        
+        </div>
+      </div>
+      
+      <div id="domain-attribute-method" class="method-detail">
+        <a name="domain"></a>
+        
+        <a name="domain="></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">domain</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p class="missing-docs">(Not documented)</p>
+        
+        </div>
+      </div>
+      
+      <div id="from-attribute-method" class="method-detail">
+        <a name="from"></a>
+        
+        <a name="from="></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">from</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p class="missing-docs">(Not documented)</p>
+        
+        </div>
+      </div>
+      
+      <div id="mailto-attribute-method" class="method-detail">
+        <a name="mailto"></a>
+        
+        <a name="mailto="></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">mailto</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p class="missing-docs">(Not documented)</p>
+        
+        </div>
+      </div>
+      
+      <div id="subject-attribute-method" class="method-detail">
+        <a name="subject"></a>
+        
+        <a name="subject="></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">subject</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p class="missing-docs">(Not documented)</p>
+        
+        </div>
+      </div>
+      
+      <div id="message-attribute-method" class="method-detail">
+        <a name="message"></a>
+        
+        <a name="message="></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">message</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p class="missing-docs">(Not documented)</p>
+        
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- Methods -->
+    
+    <div id="public-class-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="environment-options-method" class="method-detail ">
+        <a name="M000223"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">environment_options</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="environment-options-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/shell/email.rb, line 60</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">environment_options</span>
+        <span class="ruby-identifier">options</span> = {}
+        <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:server</span>]   = <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'EMAIL_SERVER'</span>]
+        <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:from</span>]     = <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'EMAIL_FROM'</span>]
+        <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:account</span>]  = <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'EMAIL_ACCOUNT'</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'EMAIL_FROM'</span>]
+        <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:password</span>] = <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'EMAIL_PASSWORD'</span>]
+        <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:port</span>]     = <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'EMAIL_PORT'</span>]
+        <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:domain</span>]   = <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'EMAIL_DOMAIN'</span>]
+        <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:login</span>]    = <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'EMAIL_LOGIN'</span>]
+        <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:secure</span>]   = <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'EMAIL_SECURE'</span>]
+        <span class="ruby-identifier">options</span>
+      <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="new-method" class="method-detail ">
+        <a name="M000225"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">new</span><span
+            class="method-args">(options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="new-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/shell/email.rb, line 94</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">require_smtp</span>
+
+      <span class="ruby-identifier">options</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">rekey</span>
+
+      <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">not</span> <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:server</span>]
+        <span class="ruby-identifier">options</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">environment_options</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">options</span>)
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-ivar">@mailto</span>    = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:to</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:mailto</span>]
+
+      <span class="ruby-ivar">@from</span>      = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:from</span>]
+      <span class="ruby-ivar">@message</span>   = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:message</span>]
+      <span class="ruby-ivar">@subject</span>   = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:subject</span>]
+      <span class="ruby-ivar">@server</span>    = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:server</span>]
+      <span class="ruby-ivar">@account</span>   = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:account</span>]
+      <span class="ruby-ivar">@passwd</span>    = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:password</span>]
+      <span class="ruby-ivar">@login</span>     = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:login</span>]
+      <span class="ruby-ivar">@secure</span>    = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:secure</span>] <span class="ruby-comment cmt">#.to_b</span>
+      <span class="ruby-ivar">@domain</span>    = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:domain</span>]
+      <span class="ruby-ivar">@port</span>      = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:port</span>]
+
+      <span class="ruby-ivar">@port</span>    <span class="ruby-operator">||=</span> <span class="ruby-identifier">secure</span> <span class="ruby-value">? </span><span class="ruby-value">465</span> <span class="ruby-operator">:</span> <span class="ruby-value">25</span>
+      <span class="ruby-ivar">@port</span> = <span class="ruby-ivar">@port</span>.<span class="ruby-identifier">to_i</span>
+
+      <span class="ruby-ivar">@account</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@from</span>
+
+      <span class="ruby-ivar">@login</span>   <span class="ruby-operator">||=</span> <span class="ruby-identifier">:plain</span>
+      <span class="ruby-ivar">@login</span> = <span class="ruby-ivar">@login</span>.<span class="ruby-identifier">to_sym</span>
+
+      <span class="ruby-ivar">@passwd</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">password</span>
+
+      <span class="ruby-ivar">@domain</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@server</span>
+
+      <span class="ruby-comment cmt"># save the password for later use</span>
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">password</span> = <span class="ruby-ivar">@passwd</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="new-with-environment-method" class="method-detail ">
+        <a name="M000224"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">new_with_environment</span><span
+            class="method-args">(options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="new-with-environment-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/shell/email.rb, line 73</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new_with_environment</span>(<span class="ruby-identifier">options</span>={})
+        <span class="ruby-identifier">environment_options</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">options</span>.<span class="ruby-identifier">rekey</span>)
+        <span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>)
+      <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="email-method" class="method-detail ">
+        <a name="M000226"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">email</span><span
+            class="method-args">(options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="email-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/shell/email.rb, line 134</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">email</span>(<span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">options</span>.<span class="ruby-identifier">rekey</span>
+
+      <span class="ruby-identifier">message</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:message</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">message</span>
+      <span class="ruby-identifier">subject</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:subject</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subject</span>
+      <span class="ruby-identifier">from</span>    = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:from</span>]    <span class="ruby-operator">||</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">from</span>
+      <span class="ruby-identifier">mailto</span>  = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:mailto</span>]  <span class="ruby-operator">||</span> <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:to</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">mailto</span>
+
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;missing email field -- server&quot;</span>  <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">server</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;missing email field -- account&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">account</span>
+
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;missing email field -- from&quot;</span>    <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">from</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;missing email field -- mailto&quot;</span>  <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">mailto</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;missing email field -- subject&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">subject</span>
+
+      <span class="ruby-identifier">passwd</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">password</span>(<span class="ruby-node">&quot;#{account} password:&quot;</span>)
+
+      <span class="ruby-identifier">mailto</span> = [<span class="ruby-identifier">mailto</span>].<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">compact</span>
+
+      <span class="ruby-identifier">msg</span> = <span class="ruby-value str">&quot;&quot;</span>
+      <span class="ruby-identifier">msg</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;From: #{from}\n&quot;</span>
+      <span class="ruby-identifier">msg</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;To: #{mailto.join(';')}\n&quot;</span>
+      <span class="ruby-identifier">msg</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;Subject: #{subject}\n&quot;</span>
+      <span class="ruby-identifier">msg</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;&quot;</span>
+      <span class="ruby-identifier">msg</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">message</span>
+
+      <span class="ruby-comment cmt">#p server, port, domain, account, passwd, login, secure if verbose?</span>
+
+      <span class="ruby-keyword kw">begin</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">SMTP</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">:enable_tls</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">secure</span>
+          <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">SMTP</span>.<span class="ruby-identifier">enable_tls</span>
+          <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">SMTP</span>.<span class="ruby-identifier">start</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">port</span>, <span class="ruby-identifier">domain</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">passwd</span>, <span class="ruby-identifier">login</span>, <span class="ruby-identifier">secure</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">smtp</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">smtp</span>.<span class="ruby-identifier">send_message</span>(<span class="ruby-identifier">msg</span>, <span class="ruby-identifier">from</span>, <span class="ruby-identifier">mailto</span>)
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">SMTP</span>.<span class="ruby-identifier">start</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">port</span>, <span class="ruby-identifier">domain</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">passwd</span>, <span class="ruby-identifier">login</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">smtp</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">smtp</span>.<span class="ruby-identifier">send_message</span>(<span class="ruby-identifier">msg</span>, <span class="ruby-identifier">from</span>, <span class="ruby-identifier">mailto</span>)
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">mailto</span>
+      <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">e</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="password-method" class="method-detail ">
+        <a name="M000237"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">password</span><span
+            class="method-args">(msg=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Ask for a password.
+</p>
+<p>
+FIXME: Does not hide password.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="password-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/shell/email.rb, line 183</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">password</span>(<span class="ruby-identifier">msg</span>=<span class="ruby-keyword kw">nil</span>)
+      <span class="ruby-identifier">msg</span> <span class="ruby-operator">||=</span> <span class="ruby-value str">&quot;Enter Password: &quot;</span>
+      <span class="ruby-identifier">inp</span> = <span class="ruby-value str">''</span>
+
+      <span class="ruby-identifier">$stdout</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">msg</span>
+
+      <span class="ruby-identifier">inp</span> = <span class="ruby-constant">STDIN</span>.<span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+
+      <span class="ruby-comment cmt">#begin</span>
+      <span class="ruby-comment cmt">#  system &quot;stty -echo&quot;</span>
+      <span class="ruby-comment cmt">#  inp = gets.chomp</span>
+      <span class="ruby-comment cmt">#ensure</span>
+      <span class="ruby-comment cmt">#  system &quot;stty echo&quot;</span>
+      <span class="ruby-comment cmt">#end</span>
+
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">inp</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="require-smtp-method" class="method-detail ">
+        <a name="M000240"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">require_smtp</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="require-smtp-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/shell/email.rb, line 202</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">require_smtp</span>
+      <span class="ruby-keyword kw">begin</span>
+        <span class="ruby-identifier">require</span> <span class="ruby-value str">'facets/net/smtp_tls'</span>
+      <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span>
+        <span class="ruby-identifier">require</span> <span class="ruby-value str">'net/smtp'</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</body>
+</html>

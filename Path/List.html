@@ -1,0 +1,2369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Class: Path::List</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+  <div class="head">
+    <h1 class="class">Path::List</h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/path/list_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/path/list.rb">lib/path/list.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Array</p>
+        
+      </div>
+      
+
+      <!-- Namespace Contents -->
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#M000031">::new</a></li>
+          
+          <li><a href="#M000032">#[]</a></li>
+          
+          <li><a href="#M000058">#absolute?</a></li>
+          
+          <li><a href="#M000048">#blockdev?</a></li>
+          
+          <li><a href="#M000040">#chardev?</a></li>
+          
+          <li><a href="#M000100">#chmod</a></li>
+          
+          <li><a href="#M000101">#chmod_r</a></li>
+          
+          <li><a href="#M000102">#chown</a></li>
+          
+          <li><a href="#M000103">#chown_r</a></li>
+          
+          <li><a href="#M000067">#cmp</a></li>
+          
+          <li><a href="#M000066">#compare_file</a></li>
+          
+          <li><a href="#M000088">#copy</a></li>
+          
+          <li><a href="#M000085">#cp</a></li>
+          
+          <li><a href="#M000089">#cp_r</a></li>
+          
+          <li><a href="#M000064">#dir?</a></li>
+          
+          <li><a href="#M000037">#directory?</a></li>
+          
+          <li><a href="#M000033">#entries</a></li>
+          
+          <li><a href="#M000055">#executable?</a></li>
+          
+          <li><a href="#M000060">#executable_real?</a></li>
+          
+          <li><a href="#M000042">#exist?</a></li>
+          
+          <li><a href="#M000043">#exists?</a></li>
+          
+          <li><a href="#M000046">#file?</a></li>
+          
+          <li><a href="#M000110">#fileutils</a></li>
+          
+          <li><a href="#M000049">#grpowned?</a></li>
+          
+          <li><a href="#M000065">#identical?</a></li>
+          
+          <li><a href="#M000098">#install</a></li>
+          
+          <li><a href="#M000081">#link</a></li>
+          
+          <li><a href="#M000079">#ln</a></li>
+          
+          <li><a href="#M000082">#ln_s</a></li>
+          
+          <li><a href="#M000084">#ln_sf</a></li>
+          
+          <li><a href="#M000072">#mkdir</a></li>
+          
+          <li><a href="#M000073">#mkdir_p</a></li>
+          
+          <li><a href="#M000077">#mkpath</a></li>
+          
+          <li><a href="#M000091">#move</a></li>
+          
+          <li><a href="#M000090">#mv</a></li>
+          
+          <li><a href="#M000107">#outofdate?</a></li>
+          
+          <li><a href="#M000053">#owned?</a></li>
+          
+          <li><a href="#M000045">#pipe?</a></li>
+          
+          <li><a href="#M000071">#pwd</a></li>
+          
+          <li><a href="#M000039">#readable?</a></li>
+          
+          <li><a href="#M000063">#readable_real?</a></li>
+          
+          <li><a href="#M000057">#relative?</a></li>
+          
+          <li><a href="#M000094">#remove</a></li>
+          
+          <li><a href="#M000092">#rm</a></li>
+          
+          <li><a href="#M000096">#rm_f</a></li>
+          
+          <li><a href="#M000095">#rm_r</a></li>
+          
+          <li><a href="#M000097">#rm_rf</a></li>
+          
+          <li><a href="#M000078">#rmdir</a></li>
+          
+          <li><a href="#M000056">#safe?</a></li>
+          
+          <li><a href="#M000050">#setgid?</a></li>
+          
+          <li><a href="#M000051">#setuid?</a></li>
+          
+          <li><a href="#M000035">#size</a></li>
+          
+          <li><a href="#M000036">#size?</a></li>
+          
+          <li><a href="#M000052">#socket?</a></li>
+          
+          <li><a href="#M000106">#stage</a></li>
+          
+          <li><a href="#M000047">#sticky?</a></li>
+          
+          <li><a href="#M000083">#symlink</a></li>
+          
+          <li><a href="#M000038">#symlink?</a></li>
+          
+          <li><a href="#M000104">#touch</a></li>
+          
+          <li><a href="#M000108">#uptodate?</a></li>
+          
+          <li><a href="#M000054">#writable?</a></li>
+          
+          <li><a href="#M000059">#writable_real?</a></li>
+          
+          <li><a href="#M000044">#zero?</a></li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../HISTORY.html">HISTORY</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="module"><a href="../Archive.html">Archive</a></li>
+        
+          <li class="module"><a href="../Archive/Tar.html">Archive::Tar</a></li>
+        
+          <li class="module"><a href="../Archive/Tar/Minitar.html">Archive::Tar::Minitar</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/BlockRequired.html">Archive::Tar::Minitar::BlockRequired</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/ClosedStream.html">Archive::Tar::Minitar::ClosedStream</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/FileNameTooLong.html">Archive::Tar::Minitar::FileNameTooLong</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Input.html">Archive::Tar::Minitar::Input</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/NonSeekableStream.html">Archive::Tar::Minitar::NonSeekableStream</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Output.html">Archive::Tar::Minitar::Output</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Reader.html">Archive::Tar::Minitar::Reader</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Reader/EntryStream.html">Archive::Tar::Minitar::Reader::EntryStream</a></li>
+        
+          <li class="module"><a href="../Archive/Tar/Minitar/Reader/InvalidEntryStream.html">Archive::Tar::Minitar::Reader::InvalidEntryStream</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/UnexpectedEOF.html">Archive::Tar::Minitar::UnexpectedEOF</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Writer.html">Archive::Tar::Minitar::Writer</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Writer/BoundedStream.html">Archive::Tar::Minitar::Writer::BoundedStream</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Writer/BoundedStream/FileOverflow.html">Archive::Tar::Minitar::Writer::BoundedStream::FileOverflow</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/Minitar/Writer/RestrictedStream.html">Archive::Tar::Minitar::Writer::RestrictedStream</a></li>
+        
+          <li class="class"><a href="../Archive/Tar/PosixHeader.html">Archive::Tar::PosixHeader</a></li>
+        
+          <li class="module"><a href="../Path.html">Path</a></li>
+        
+          <li class="class"><a href="../Path/Emailer.html">Path::Emailer</a></li>
+        
+          <li class="class"><a href="../Path/List.html">Path::List</a></li>
+        
+          <li class="class"><a href="../Path/Name.html">Path::Name</a></li>
+        
+          <li class="class"><a href="../Path/Shell.html">Path::Shell</a></li>
+        
+          <li class="module"><a href="../Folio.html">Folio</a></li>
+        
+          <li class="module"><a href="../Folio/XDG.html">Folio::XDG</a></li>
+        
+          <li class="module"><a href="../Ratch.html">Ratch</a></li>
+        
+          <li class="class"><a href="../Ratch/Console.html">Ratch::Console</a></li>
+        
+          <li class="class"><a href="../NilClass.html">NilClass</a></li>
+        
+          <li class="class"><a href="../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+
+    <div id="validator-badges">
+      Generated with <a href="http://github.com/proutils/rdazzle">Razzle Dazzle Redfish</a>.<br/>
+      <a href="http://validator.w3.org/check/referer">[Validate]</a>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      
+    </div>
+
+    <!-- Constants -->
+    
+
+    <!-- Attributes -->
+    
+    <div id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="local-attribute-method" class="method-detail">
+        <a name="local"></a>
+        
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">local</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- Methods -->
+    
+    <div id="public-class-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="new-method" class="method-detail ">
+        <a name="M000031"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">new</span><span
+            class="method-args">(local, *globs)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="new-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 9</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">local</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">globs</span>)
+      <span class="ruby-ivar">@local</span> = <span class="ruby-constant">Pathname</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">local</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="--method" class="method-detail ">
+        <a name="M000032"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">[]</span><span
+            class="method-args">(*entries)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 14</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">entries</span>)
+      <span class="ruby-identifier">entries</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">entry</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">entry</span>
+        <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Pathname</span>
+          <span class="ruby-identifier">push</span>(<span class="ruby-ivar">@local</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">entry</span>)
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-identifier">concat</span>(<span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-ivar">@local</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">entry</span>).<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-constant">Pathname</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">f</span>) })
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="absolute--method" class="method-detail ">
+        <a name="M000058"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">absolute?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="absolute--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 69</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">absolute?</span>   ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">absolute?</span>(<span class="ruby-identifier">path</span>)   } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="blockdev--method" class="method-detail ">
+        <a name="M000048"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">blockdev?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="blockdev--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 57</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">blockdev?</span>   ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">blockdev?</span>(<span class="ruby-identifier">path</span>)   } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="chardev--method" class="method-detail ">
+        <a name="M000040"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">chardev?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="chardev--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 50</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">chardev?</span>    ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">chardev?</span>(<span class="ruby-identifier">path</span>)    } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="chmod-method" class="method-detail ">
+        <a name="M000100"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">chmod</span><span
+            class="method-args">(mode, list, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="chmod-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 195</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">chmod</span>(<span class="ruby-identifier">mode</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">list</span> = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">chmod</span>(<span class="ruby-identifier">mode</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="chmod-r-method" class="method-detail ">
+        <a name="M000101"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">chmod_r</span><span
+            class="method-args">(mode, list, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="chmod-r-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 200</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">chmod_r</span>(<span class="ruby-identifier">mode</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">list</span> = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">chmod_r</span>(<span class="ruby-identifier">mode</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="chown-method" class="method-detail ">
+        <a name="M000102"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">chown</span><span
+            class="method-args">(user, group, list, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+alias_method :chmod_R, :<a href="List.html#M000101">chmod_r</a>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="chown-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 206</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">chown</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">list</span> = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">chown</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="chown-r-method" class="method-detail ">
+        <a name="M000103"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">chown_r</span><span
+            class="method-args">(user, group, list, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="chown-r-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 211</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">chown_r</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">list</span> = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">chown_r</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="cmp-method" class="method-detail method-alias">
+        <a name="M000067"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">cmp</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Alias for <a href="List.html#M000065">identical?</a>
+</p>
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="compare-file-method" class="method-detail method-alias">
+        <a name="M000066"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">compare_file</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Alias for <a href="List.html#M000065">identical?</a>
+</p>
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="copy-method" class="method-detail method-alias">
+        <a name="M000088"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">copy</span><span
+            class="method-args">(dest, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Alias for <a href="List.html#M000085">cp</a>
+</p>
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="cp-method" class="method-detail ">
+        <a name="M000085"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">cp</span><span
+            class="method-args">(dest, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+cp(list, dir, options={})
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="cp-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 146</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cp</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">src</span>  = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-comment cmt">#dest = localize(dest)</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">cp</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="List.html#M000088">copy</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="cp-r-method" class="method-detail ">
+        <a name="M000089"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">cp_r</span><span
+            class="method-args">(dest, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+<a href="List.html#M000089">cp_r</a>(list, dir, options={})
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="cp-r-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 154</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cp_r</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">src</span>  = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-comment cmt">#dest = localize(dest)</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">cp_r</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="dir--method" class="method-detail method-alias">
+        <a name="M000064"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">dir?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Alias for <a href="List.html#M000037">directory?</a>
+</p>
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="directory--method" class="method-detail ">
+        <a name="M000037"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">directory?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="directory--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 47</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">directory?</span>  ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">path</span>)  } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="List.html#M000064">dir?</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="entries-method" class="method-detail ">
+        <a name="M000033"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">entries</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+relative to local
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="entries-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 27</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">entries</span>
+      <span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">entry</span><span class="ruby-operator">|</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-identifier">local</span><span class="ruby-operator">+</span><span class="ruby-value str">'/'</span>,<span class="ruby-value str">''</span>) }
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="executable--method" class="method-detail ">
+        <a name="M000055"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">executable?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="executable--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 64</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">executable?</span> ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-identifier">path</span>) } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="executable-real--method" class="method-detail ">
+        <a name="M000060"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">executable_real?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="executable-real--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 72</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">executable_real?</span> ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">executable_real?</span>(<span class="ruby-identifier">path</span>) } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="exist--method" class="method-detail ">
+        <a name="M000042"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">exist?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="exist--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 51</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exist?</span>      ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">path</span>)      } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="exists--method" class="method-detail ">
+        <a name="M000043"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">exists?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="exists--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 52</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exists?</span>     ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">path</span>)     } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="file--method" class="method-detail ">
+        <a name="M000046"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">file?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="file--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 55</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file?</span>       ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">file?</span>(<span class="ruby-identifier">path</span>)       } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="grpowned--method" class="method-detail ">
+        <a name="M000049"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">grpowned?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="grpowned--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 58</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">grpowned?</span>   ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">grpowned?</span>(<span class="ruby-identifier">path</span>)   } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="identical--method" class="method-detail ">
+        <a name="M000065"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">identical?</span><span
+            class="method-args">(other)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="identical--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 77</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">identical?</span>(<span class="ruby-identifier">other</span>)
+      <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">identical?</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">other</span>)  }
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="List.html#M000066">compare_file</a>, <a href="List.html#M000067">cmp</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="install-method" class="method-detail ">
+        <a name="M000098"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">install</span><span
+            class="method-args">(src, dest, mode, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="install-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 189</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">install</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">mode</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">src</span>  = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-comment cmt">#dest = localize(dest)</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">install</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">mode</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="link-method" class="method-detail method-alias">
+        <a name="M000081"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">link</span><span
+            class="method-args">(new, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Alias for <a href="List.html#M000079">ln</a>
+</p>
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="ln-method" class="method-detail ">
+        <a name="M000079"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">ln</span><span
+            class="method-args">(new, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+ln(list, destdir, options={})
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="ln-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 124</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ln</span>(<span class="ruby-identifier">new</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">src</span> = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-comment cmt">#new = localize(new)</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">ln</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">new</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="List.html#M000081">link</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="ln-s-method" class="method-detail ">
+        <a name="M000082"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">ln_s</span><span
+            class="method-args">(new, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+<a href="List.html#M000082">ln_s</a>(list, destdir, options={})
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="ln-s-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 132</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ln_s</span>(<span class="ruby-identifier">new</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">src</span> = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-comment cmt">#new = localize(new)</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">ln_s</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">new</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="List.html#M000083">symlink</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="ln-sf-method" class="method-detail ">
+        <a name="M000084"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">ln_sf</span><span
+            class="method-args">(new, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="ln-sf-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 139</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ln_sf</span>(<span class="ruby-identifier">new</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">src</span> = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-comment cmt">#new = localize(new)</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">ln_sf</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">new</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="mkdir-method" class="method-detail ">
+        <a name="M000072"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">mkdir</span><span
+            class="method-args">(options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="mkdir-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 110</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mkdir</span>(<span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">dir</span><span class="ruby-operator">|</span> <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-identifier">dir</span>, <span class="ruby-identifier">options</span>) }
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="mkdir-p-method" class="method-detail ">
+        <a name="M000073"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">mkdir_p</span><span
+            class="method-args">(options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="mkdir-p-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 114</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mkdir_p</span>(<span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">dir</span><span class="ruby-operator">|</span> <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">mkdir_p</span>(<span class="ruby-identifier">dir</span>, <span class="ruby-identifier">options</span>) }
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="List.html#M000077">mkpath</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="mkpath-method" class="method-detail method-alias">
+        <a name="M000077"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">mkpath</span><span
+            class="method-args">(options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Alias for <a href="List.html#M000073">mkdir_p</a>
+</p>
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="move-method" class="method-detail method-alias">
+        <a name="M000091"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">move</span><span
+            class="method-args">(dest, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Alias for <a href="List.html#M000090">mv</a>
+</p>
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="mv-method" class="method-detail ">
+        <a name="M000090"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">mv</span><span
+            class="method-args">(dest, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+mv(list, dir, options={})
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="mv-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 161</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mv</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">src</span>  = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-comment cmt">#dest = localize(dest)</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">mv</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="List.html#M000091">move</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="outofdate--method" class="method-detail ">
+        <a name="M000107"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">outofdate?</span><span
+            class="method-args">(path)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="outofdate--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 243</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">outofdate?</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">outofdate?</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">to_a</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="owned--method" class="method-detail ">
+        <a name="M000053"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">owned?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="owned--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 62</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">owned?</span>      ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">owned?</span>(<span class="ruby-identifier">path</span>)      } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="pipe--method" class="method-detail ">
+        <a name="M000045"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">pipe?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="pipe--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 54</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pipe?</span>       ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">pipe?</span>(<span class="ruby-identifier">path</span>)       } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="pwd-method" class="method-detail ">
+        <a name="M000071"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">pwd</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Present working directory. (?)
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="pwd-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 105</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pwd</span>
+      <span class="ruby-ivar">@local</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="readable--method" class="method-detail ">
+        <a name="M000039"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">readable?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="readable--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 49</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">readable?</span>   ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">readable?</span>(<span class="ruby-identifier">path</span>)   } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="readable-real--method" class="method-detail ">
+        <a name="M000063"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">readable_real?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="readable-real--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 73</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">readable_real?</span>   ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">readable_real?</span>(<span class="ruby-identifier">path</span>)   } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="relative--method" class="method-detail ">
+        <a name="M000057"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">relative?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Will these work since all paths are localized?
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="relative--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 68</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">relative?</span>   ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">relative?</span>(<span class="ruby-identifier">path</span>)   } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="remove-method" class="method-detail method-alias">
+        <a name="M000094"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">remove</span><span
+            class="method-args">(options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Alias for <a href="List.html#M000092">rm</a>
+</p>
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="rm-method" class="method-detail ">
+        <a name="M000092"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">rm</span><span
+            class="method-args">(options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="rm-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 168</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rm</span>(<span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">list</span> = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">rm</span>(<span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="List.html#M000094">remove</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="rm-f-method" class="method-detail ">
+        <a name="M000096"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">rm_f</span><span
+            class="method-args">(list, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="rm-f-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 179</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rm_f</span>(<span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">list</span> = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">rm_f</span>(<span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="rm-r-method" class="method-detail ">
+        <a name="M000095"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">rm_r</span><span
+            class="method-args">(options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="rm-r-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 174</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rm_r</span>(<span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">list</span> = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">rm_r</span>(<span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="rm-rf-method" class="method-detail ">
+        <a name="M000097"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">rm_rf</span><span
+            class="method-args">(list, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="rm-rf-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 184</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rm_rf</span>(<span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">list</span> = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">rm_rf</span>(<span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="rmdir-method" class="method-detail ">
+        <a name="M000078"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">rmdir</span><span
+            class="method-args">(options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="rmdir-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 119</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rmdir</span>(<span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">dir</span><span class="ruby-operator">|</span> <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">rmdir</span>(<span class="ruby-identifier">dir</span>, <span class="ruby-identifier">options</span>) }
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="safe--method" class="method-detail ">
+        <a name="M000056"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">safe?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="safe--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 65</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">safe?</span>       ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">safe?</span>(<span class="ruby-identifier">path</span>)       } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="setgid--method" class="method-detail ">
+        <a name="M000050"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">setgid?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="setgid--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 59</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setgid?</span>     ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">setgid?</span>(<span class="ruby-identifier">path</span>)     } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="setuid--method" class="method-detail ">
+        <a name="M000051"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">setuid?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="setuid--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 60</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setuid?</span>     ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">setuid?</span>(<span class="ruby-identifier">path</span>)     } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="size-method" class="method-detail ">
+        <a name="M000035"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">size</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="size-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 42</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size</span>
+      <span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>){ <span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>, <span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">size</span>(<span class="ruby-identifier">path</span>) }
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="List.html#M000036">size?</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="size--method" class="method-detail method-alias">
+        <a name="M000036"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">size?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Alias for <a href="List.html#M000035">size</a>
+</p>
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="socket--method" class="method-detail ">
+        <a name="M000052"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">socket?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="socket--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 61</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">socket?</span>     ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">socket?</span>(<span class="ruby-identifier">path</span>)     } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="stage-method" class="method-detail ">
+        <a name="M000106"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">stage</span><span
+            class="method-args">(dir)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="stage-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 223</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stage</span>(<span class="ruby-identifier">dir</span>)
+      <span class="ruby-comment cmt">#dir   = localize(directory)</span>
+      <span class="ruby-comment cmt">#files = localize(files)</span>
+      <span class="ruby-comment cmt">#fileutils.stage(dir, work, entries)</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">stage</span>(<span class="ruby-identifier">dir</span>, <span class="ruby-identifier">local</span>, <span class="ruby-identifier">entries</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="sticky--method" class="method-detail ">
+        <a name="M000047"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">sticky?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="sticky--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 56</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sticky?</span>     ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">sticky?</span>(<span class="ruby-identifier">path</span>)     } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="symlink-method" class="method-detail method-alias">
+        <a name="M000083"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">symlink</span><span
+            class="method-args">(new, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Alias for <a href="List.html#M000082">ln_s</a>
+</p>
+          
+
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="symlink--method" class="method-detail ">
+        <a name="M000038"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">symlink?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="symlink--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 48</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">symlink?</span>    ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">symlink?</span>(<span class="ruby-identifier">path</span>)    } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="touch-method" class="method-detail ">
+        <a name="M000104"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">touch</span><span
+            class="method-args">(list, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+alias_method :chown_R, :<a href="List.html#M000103">chown_r</a>
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="touch-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 217</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">touch</span>(<span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>={})
+      <span class="ruby-identifier">list</span> = <span class="ruby-identifier">to_a</span>
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">touch</span>(<span class="ruby-identifier">list</span>, <span class="ruby-identifier">options</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="uptodate--method" class="method-detail ">
+        <a name="M000108"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">uptodate?</span><span
+            class="method-args">(path)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code"
+            id="uptodate--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 248</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">uptodate?</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">fileutils</span>.<span class="ruby-identifier">uptodate?</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">to_a</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="writable--method" class="method-detail ">
+        <a name="M000054"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">writable?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="writable--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 63</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">writable?</span>   ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">writable?</span>(<span class="ruby-identifier">path</span>)   } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="writable-real--method" class="method-detail ">
+        <a name="M000059"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">writable_real?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="writable-real--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 71</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">writable_real?</span>   ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">writable_real?</span>(<span class="ruby-identifier">path</span>)   } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="zero--method" class="method-detail ">
+        <a name="M000044"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">zero?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="zero--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 53</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">zero?</span>       ; <span class="ruby-identifier">all?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">zero?</span>(<span class="ruby-identifier">path</span>)       } ; <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+    <div id="private-instance-method-details" class="method-section section">
+      <h3 class="section-header">Private Instance Methods</h3>
+
+    
+      <div id="fileutils-method" class="method-detail ">
+        <a name="M000110"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">fileutils</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Returns FileUtils module based on mode.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="fileutils-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/list.rb, line 269</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fileutils</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">dryrun?</span>
+        <span class="ruby-operator">::</span><span class="ruby-constant">FileUtils</span><span class="ruby-operator">::</span><span class="ruby-constant">DryRun</span>
+      <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">noop?</span>
+        <span class="ruby-operator">::</span><span class="ruby-constant">FileUtils</span><span class="ruby-operator">::</span><span class="ruby-constant">Noop</span>
+      <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">verbose?</span>
+        <span class="ruby-operator">::</span><span class="ruby-constant">FileUtils</span><span class="ruby-operator">::</span><span class="ruby-constant">Verbose</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-operator">::</span><span class="ruby-constant">FileUtils</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</body>
+</html>
