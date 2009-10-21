@@ -1,5 +1,7 @@
 require 'thread'
-require 'ratch/core_ext'
+require 'path/filetest'
+require 'path/fileutils'
+#require 'ratch/core_ext'
 #require 'ratch/ziputils'
 #require 'ratch/xdg'
 
@@ -18,14 +20,14 @@ module Path
     end
 
     # New Shell object.
-    def initialize(*path)
-      opts = (Hash===path.last ? path.pop : {})
-      #mode(opts)
+    def initialize(*path_opts)
+      opts = (Hash===path_opts.last ? path_opts.pop : {})
+      path = path_opts
 
-      @quiet   = opts.delete(:quiet)
-      @noop    = opts.delete(:noop)
-      @verbose = opts.delete(:verbose)
-      @debug   = opts.delete(:debug)
+      @quiet   = opts[:quiet]
+      @noop    = opts[:noop]
+      @verbose = opts[:verbose]
+      @debug   = opts[:debug]
 
       if path.empty?
         path = Dir.pwd
@@ -123,7 +125,7 @@ module Path
     # should #file and this be the same?
     def file(path)
       #FileObject[name]
-      raise unless File.file?(name)
+      raise unless File.file?(path)
       Pathname.new(localize(path))
     end
 
@@ -251,12 +253,18 @@ module Path
     #end
 
     # Change working directory.
+    #
+    # TODO: Make thread safe.
+    #
     def cd(path, &block)
       if block
         work_old = @work
         begin
           @work = dir(localize(path))
-          @work.chdir{ block.call }
+          locally(&block)
+          #mutex.synchronize do
+          #  Dir.chdir(@work){ block.call }
+          #end
         ensure
           @work = work_old
         end
@@ -685,7 +693,8 @@ module Path
         block.call
       else
         mutex.synchronize do
-          work.chdir(&block)
+          #work.chdir(&block)
+          Dir.chdir(work, &block)
         end
       end
     end

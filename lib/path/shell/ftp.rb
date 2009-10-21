@@ -1,4 +1,4 @@
-module Ratch
+module Path
 
   class Shell
 

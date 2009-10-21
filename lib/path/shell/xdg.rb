@@ -1,10 +1,10 @@
 begin
   require 'xdg'
 rescue LoadError
-  require 'ratch/vendor/xdg'
+  require 'path/xdg'
 end
 
-module Ratch
+module Path
 
   class Shell
 

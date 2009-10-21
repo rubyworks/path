@@ -1,4 +1,4 @@
-module Ratch
+module Path
 
   class Shell
 
@@ -15,7 +15,7 @@ module Ratch
 
       file   = localize(file)
       tofile = localize(tofile)
-        
+
       Zlib::GzipWriter.open(tofile) do |gz|
         gz.write(File.read(file))
       end unless noop

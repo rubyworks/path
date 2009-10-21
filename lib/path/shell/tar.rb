@@ -3,7 +3,7 @@
 # TODO: Add bzip support ?
 #++
 
-module Ratch
+module Path
 
   class Shell
 
@@ -12,7 +12,7 @@ module Ratch
       begin
         require 'archive/tar/minitar'
       rescue LoadError
-        require 'ratch/vendor/minitar'
+        require 'path/minitar'
       end
     end
 
@@ -24,12 +24,13 @@ module Ratch
       file ||= File.basename(File.expand_path(folder)) + '.tar'
       cmd = "tar -cf #{file} #{folder}"
       puts cmd if verbose
-      folder, file = localize(folder), localize(file)
       unless noop
-        gzIO = File.open(file, 'wb')
-        Archive::Tar::Minitar.pack(folder, gzIO)
+        locally do
+          gzIO = File.open(file, 'wb')
+          Archive::Tar::Minitar.pack(folder, gzIO)
+        end
       end
-      return file
+      path(file)
     end
 
     # Untar
@@ -40,12 +41,13 @@ module Ratch
       #file ||= File.basename(File.expand_path(folder)) + '.tar'
       cmd = "untar #{file}"
       puts cmd if verbose
-      file = localize(file)
       unless noop
-        gzIO = File.open(file, 'wb')
-        Archive::Tar::Minitar.unpack(gzIO)
+        locally do
+          gzIO = File.open(file, 'wb')
+          Archive::Tar::Minitar.unpack(gzIO)
+        end
       end
-      return file
+      path(file)
     end
 
     # Tar Gzip
@@ -56,12 +58,13 @@ module Ratch
       file ||= File.basename(File.expand_path(folder)) + '.tar.gz' # '.tgz' which ?
       cmd = "tar --gzip -czf #{file} #{folder}"
       puts cmd if verbose
-      folder, file = localize(folder), localize(file)
       unless noop
-        gzIO = Zlib::GzipWriter.new(File.open(file, 'wb'))
-        Archive::Tar::Minitar.pack(folder, gzIO)
+        locally do #folder, file = localize(folder), localize(file)
+          gzIO = Zlib::GzipWriter.new(File.open(file, 'wb'))
+          Archive::Tar::Minitar.pack(folder, gzIO)
+        end
       end
-      return file
+      path(file)
     end
 
     alias_method :tar_z, :tar_gzip

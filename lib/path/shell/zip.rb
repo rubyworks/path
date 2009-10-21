@@ -1,7 +1,7 @@
 #--
 # TODO: Find way to zip without shelling-out.
 #++
-module Ratch
+module Path
 
   class Shell
 
