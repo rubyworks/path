@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Module: FileUtils</title>
+
+  
+    <link rel="SHORTCUT ICON" href="./images/module.png">
+  
+
+  <link type="text/css" media="screen" rel="stylesheet" href="./rdoc.css" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+  <div class="head">
+    <h1>
+      
+        <img src="./images/module.png" align="absmiddle">&nbsp;
+      
+      <a href="./index.html">Path</a>&nbsp;
+      <a href="/">FileUtils</a>
+    </h1>
+  </div>
+
+  <div id="metadata">
+    <div id="project-metadata">
+
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li class="file"><a href="./lib/path/fileutils_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/path/fileutils.rb">lib/path/fileutils.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      <!-- What about Git info, or Hg info? This seems almost silly, albeit kind of cool. -->
+
+      
+    </div>
+
+    <div id="class-metadata">
+
+      <!-- Parent Class -->
+      
+
+      <!-- Namespace Contents -->
+      
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li class="module"><a href="FileUtils/DryRun.html">FileUtils::DryRun</a></li>
+          
+          <li class="module"><a href="FileUtils/NoWrite.html">FileUtils::NoWrite</a></li>
+          
+          <li class="module"><a href="FileUtils/Verbose.html">FileUtils::Verbose</a></li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li class="method"><a href="#M000218">#amass</a></li>
+          
+          <li class="method"><a href="#M000213">#out_of_date?</a></li>
+          
+          <li class="method"><a href="#M000209">#outofdate?</a></li>
+          
+          <li class="method"><a href="#M000203">#stage</a></li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Included Modules -->
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./HISTORY.html">HISTORY</a></li>
+        
+          <li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <!-- classpage.html : classes -->
+        <ul class="link-list">
+        
+          <li class="module"><a href="./Archive.html">Archive</a></li>
+        
+          <li class="module"><a href="./Archive/Tar.html">Archive::Tar</a></li>
+        
+          <li class="module"><a href="./Archive/Tar/Minitar.html">Archive::Tar::Minitar</a></li>
+        
+          <li class="class"><a href="./Archive/Tar/Minitar/BlockRequired.html">Archive::Tar::Minitar::BlockRequired</a></li>
+        
+          <li class="class"><a href="./Archive/Tar/Minitar/ClosedStream.html">Archive::Tar::Minitar::ClosedStream</a></li>
+        
+          <li class="class"><a href="./Archive/Tar/Minitar/FileNameTooLong.html">Archive::Tar::Minitar::FileNameTooLong</a></li>
+        
+          <li class="class"><a href="./Archive/Tar/Minitar/Input.html">Archive::Tar::Minitar::Input</a></li>
+        
+          <li class="class"><a href="./Archive/Tar/Minitar/NonSeekableStream.html">Archive::Tar::Minitar::NonSeekableStream</a></li>
+        
+          <li class="class"><a href="./Archive/Tar/Minitar/Output.html">Archive::Tar::Minitar::Output</a></li>
+        
+          <li class="class"><a href="./Archive/Tar/Minitar/Reader.html">Archive::Tar::Minitar::Reader</a></li>
+        
+          <li class="class"><a href="./Archive/Tar/Minitar/Reader/EntryStream.html">Archive::Tar::Minitar::Reader::EntryStream</a></li>
+        
+          <li class="module"><a href="./Archive/Tar/Minitar/Reader/InvalidEntryStream.html">Archive::Tar::Minitar::Reader::InvalidEntryStream</a></li>
+        
+          <li class="class"><a href="./Archive/Tar/Minitar/UnexpectedEOF.html">Archive::Tar::Minitar::UnexpectedEOF</a></li>
+        
+          <li class="class"><a href="./Archive/Tar/Minitar/Writer.html">Archive::Tar::Minitar::Writer</a></li>
+        
+          <li class="class"><a href="./Archive/Tar/Minitar/Writer/BoundedStream.html">Archive::Tar::Minitar::Writer::BoundedStream</a></li>
+        
+          <li class="class"><a href="./Archive/Tar/Minitar/Writer/BoundedStream/FileOverflow.html">Archive::Tar::Minitar::Writer::BoundedStream::FileOverflow</a></li>
+        
+          <li class="class"><a href="./Archive/Tar/Minitar/Writer/RestrictedStream.html">Archive::Tar::Minitar::Writer::RestrictedStream</a></li>
+        
+          <li class="class"><a href="./Archive/Tar/PosixHeader.html">Archive::Tar::PosixHeader</a></li>
+        
+          <li class="module"><a href="./Path.html">Path</a></li>
+        
+          <li class="class"><a href="./Path/Glob.html">Path::Glob</a></li>
+        
+          <li class="class"><a href="./Path/List.html">Path::List</a></li>
+        
+          <li class="class"><a href="./Path/Name.html">Path::Name</a></li>
+        
+          <li class="class"><a href="./Path/Shell.html">Path::Shell</a></li>
+        
+          <li class="class"><a href="./Path/Store.html">Path::Store</a></li>
+        
+          <li class="module"><a href="./FileUtils.html">FileUtils</a></li>
+        
+          <li class="module"><a href="./FileUtils/DryRun.html">FileUtils::DryRun</a></li>
+        
+          <li class="module"><a href="./FileUtils/NoWrite.html">FileUtils::NoWrite</a></li>
+        
+          <li class="module"><a href="./FileUtils/Verbose.html">FileUtils::Verbose</a></li>
+        
+          <li class="module"><a href="./Ratch.html">Ratch</a></li>
+        
+          <li class="class"><a href="./Ratch/Console.html">Ratch::Console</a></li>
+        
+          <li class="module"><a href="./FileTest.html">FileTest</a></li>
+        
+          <li class="class"><a href="./NilClass.html">NilClass</a></li>
+        
+          <li class="class"><a href="./String.html">String</a></li>
+        
+          <li class="module"><a href="./XDG.html">XDG</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+
+    <div id="validator-badges">
+      Generated with <a href="http://github.com/proutils/rdazzle">Razzle Dazzle Redfish</a><br/><br/>
+      <a href="http://validator.w3.org/check/referer">[Validate]</a>
+    </div>
+  </div>
+
+  <div id="documentation">
+
+    <div id="description">
+      
+        <h1>FileUtils</h1>
+      
+
+      
+    </div>
+
+    <!-- Constants -->
+    
+
+    <!-- Attributes -->
+    
+
+    <!-- Methods -->
+    
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="amass-method" class="method-detail ">
+        <a name="M000218"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">amass</span><span
+            class="method-args">(include_globs, exclude_globs=[], ignore=[])</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+An intergrated glob like method that take a set of include globs, exclude
+globs and ignore globs to produce a collection of paths.
+</p>
+<p>
+The ignore_globs differ from exclude_globs in that they match by the
+basename of the path rather than the whole pathname.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="amass-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/fileutils.rb, line 68</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">amass</span>(<span class="ruby-identifier">include_globs</span>, <span class="ruby-identifier">exclude_globs</span>=[], <span class="ruby-identifier">ignore</span>=[])
+    <span class="ruby-identifier">include_globs</span> = <span class="ruby-identifier">include_globs</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">f</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">f</span>, <span class="ruby-value str">'**/*'</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">f</span> } <span class="ruby-comment cmt"># Recursive!</span>
+    <span class="ruby-identifier">exclude_globs</span> = <span class="ruby-identifier">exclude_globs</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">f</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">f</span>, <span class="ruby-value str">'**/*'</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">f</span> } <span class="ruby-comment cmt"># Recursive!</span>
+    <span class="ruby-identifier">include_files</span> = <span class="ruby-identifier">include_globs</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">g</span><span class="ruby-operator">|</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-identifier">g</span>) }.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">uniq</span>
+    <span class="ruby-identifier">exclude_files</span> = <span class="ruby-identifier">exclude_globs</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">g</span><span class="ruby-operator">|</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-identifier">g</span>) }.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">uniq</span>
+    <span class="ruby-identifier">files</span> = <span class="ruby-identifier">include_files</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">exclude_files</span>
+    <span class="ruby-identifier">files</span> = <span class="ruby-identifier">files</span>.<span class="ruby-identifier">reject</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ignore</span>.<span class="ruby-identifier">any?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">fnmatch?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">f</span>)) } }
+    <span class="ruby-identifier">files</span>
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="out-of-date--method" class="method-detail ">
+        <a name="M000213"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">out_of_date?</span><span
+            class="method-args">(path, *sources)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+DEPRECATE Does a path need updating, based on given <tt>sources</tt>? This
+compares mtimes of give paths. Returns false if the path needs to be
+updated.
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="out-of-date--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/fileutils.rb, line 51</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">out_of_date?</span>(<span class="ruby-identifier">path</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">sources</span>)
+    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">path</span>)
+
+    <span class="ruby-identifier">sources</span> = <span class="ruby-identifier">sources</span>.<span class="ruby-identifier">collect</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">source</span><span class="ruby-operator">|</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-identifier">source</span>) }.<span class="ruby-identifier">flatten</span>
+    <span class="ruby-identifier">mtimes</span>  = <span class="ruby-identifier">sources</span>.<span class="ruby-identifier">collect</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">mtime</span>(<span class="ruby-identifier">file</span>) }
+
+    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">mtimes</span>.<span class="ruby-identifier">empty?</span>  <span class="ruby-comment cmt"># TODO: This the way to go here?</span>
+
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">mtime</span>(<span class="ruby-identifier">path</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">mtimes</span>.<span class="ruby-identifier">max</span>
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="outofdate--method" class="method-detail ">
+        <a name="M000209"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">outofdate?</span><span
+            class="method-args">(path, *sources)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Opposite of uptodate?
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="outofdate--source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/fileutils.rb, line 41</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">outofdate?</span>(<span class="ruby-identifier">path</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">sources</span>)
+    <span class="ruby-comment cmt">#return true unless File.exist?(path)</span>
+    <span class="ruby-operator">!</span> <span class="ruby-identifier">uptodate?</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">sources</span>.<span class="ruby-identifier">flatten</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+      <div id="stage-method" class="method-detail ">
+        <a name="M000203"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">stage</span><span
+            class="method-args">(stage_directory, source_directory, files)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p>
+Stage by hard linking included files to a stage directory.
+</p>
+<pre>
+  stage_directory   Stage directory.
+  files             Files to link to stage.
+</pre>
+<p>
+TODO: Rename to linkstage or something less likely to name clash? TODO: Add
+options for :verbose, :noop and :dryrun ?
+</p>
+          
+
+          
+          <div class="method-source-code"
+            id="stage-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/fileutils.rb, line 17</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stage</span>(<span class="ruby-identifier">stage_directory</span>, <span class="ruby-identifier">source_directory</span>, <span class="ruby-identifier">files</span>)
+    <span class="ruby-identifier">stage_directory</span>, <span class="ruby-identifier">source_directory</span> = <span class="ruby-identifier">stage_directory</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">source_directory</span>.<span class="ruby-identifier">to_s</span>
+    <span class="ruby-comment cmt"># Ensure existance of staging area.</span>
+    <span class="ruby-identifier">rm_r</span>(<span class="ruby-identifier">stage_directory</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">stage_directory</span>)
+    <span class="ruby-identifier">mkdir_p</span>(<span class="ruby-identifier">stage_directory</span>)
+    <span class="ruby-comment cmt"># Link files into staging area.</span>
+    <span class="ruby-identifier">files</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">src</span>  = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">source_directory</span>, <span class="ruby-identifier">f</span>)
+      <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">stage_directory</span>, <span class="ruby-identifier">f</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">src</span>)
+        <span class="ruby-identifier">mkdir_p</span>(<span class="ruby-identifier">file</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">file</span>)
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">fdir</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">file</span>)
+        <span class="ruby-identifier">mkdir_p</span>(<span class="ruby-identifier">fdir</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">fdir</span>)
+        <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">file</span>) <span class="ruby-keyword kw">and</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">mtime</span>(<span class="ruby-identifier">file</span>) <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">mtime</span>(<span class="ruby-identifier">src</span>)
+          <span class="ruby-identifier">ln</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">file</span>) <span class="ruby-comment cmt">#safe_ln ?</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">stage_directory</span>
+  <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
+
+  </div>
+
+
+  <div id="rdoc-debugging-section-dump" class="debugging-section">
+  
+    <p>Disabled; run with --debug to generate this.</p>
+  
+  </div>
+
+</body>
+</html>

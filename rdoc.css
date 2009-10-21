@@ -13,7 +13,7 @@
 body {
   background: #efefef;
   font: 14px "Helvetica Neue", Helvetica, Tahoma, sans-serif;
-  padding: 20px 40px;
+  padding: 15px 40px;
 }
 
 /*
@@ -45,7 +45,6 @@ a:hover {
 }
 
 pre {
-  background: #ddd;
   padding: 0.5em 0;
   border: 1px solid #ccc;
 }
@@ -54,17 +53,31 @@ p {
   margin: 1em 0;
 }
 
+ul {
+  margin-left: 20px;
+}
+
 
 .head {
   width: auto;
-  background: #FF226C;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  border: 1px solid #aaa;
-  padding: 5px 20px;
+  border: 0px solid #aaa;
+  padding: 0 10px;
+  margin: 0 8px 5px 8px;
 }
 
-.head h1 { color: white; }
+.head h1 {
+  color: #FF226C;
+  color: #666;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.head h1 a {
+  color: #FF226C;
+  font-weight: bold; 
+}
 
 /* @group Generic Classes */
 
@@ -88,7 +101,7 @@ p {
   background: white url(images/wrench_orange.png) no-repeat 4px center;
   color: #ccc;
   line-height: 2em;
-  border: 1px solid #d00;
+  border: 0px solid #d00;
   opacity: 1;
   padding-left: 20px;
   text-indent: 24px;
@@ -124,14 +137,25 @@ body.file p {
 }
 */
 
-ul a {
+#metadata ul {
   font-size: 14px;
 }
 
+#metadata ul a {
+  font-size: 14px;
+}
+
+/*
 .indexpage ul,
 .file #documentation ul {
   line-height: 160%;
   list-style: none;
+}
+*/
+
+#metadata ul {
+  list-style: none;
+  margin-left: 0;
 }
 
 /*
@@ -141,29 +165,30 @@ ul a {
 }
 */
 
-.indexpage li,
-.file #documentation li {
+#metadata li {
   padding-left: 20px;
   background: url(images/bullet_black.png) no-repeat left 4px;
+  color: #666;
 }
 
-li {
-
-}
-
-li.module {
+#metadata li.method {
   padding-left: 20px;
-  background: url(images/package.png) no-repeat left 2px;
+  background: url(images/method.png) no-repeat left 2px;
 }
 
-li.class {
+#metadata li.module {
   padding-left: 20px;
-  background: url(images/ruby.png) no-repeat left 2px;
+  background: url(images/module.png) no-repeat left 2px;
 }
 
-li.file {
+#metadata li.class {
   padding-left: 20px;
-  background: url(images/page_white_text.png) no-repeat left 2px;
+  background: url(images/class.png) no-repeat left 2px;
+}
+
+#metadata li.file {
+  padding-left: 20px;
+  background: url(images/file.png) no-repeat left 2px;
 }
 
 /* @end */
@@ -173,11 +198,11 @@ li.file {
 #metadata {
   float: left;
   width: 320px;
-  margin-top: 0;
+  margin-top: 10px;
 }
 
 #documentation {
-  margin: 2em 1em 5em 360px;
+  margin: 0 1em 5em 360px;
   min-width: 340px;
 }
 
@@ -259,7 +284,7 @@ ul.link-list .type {
 
 /* @group Project Metadata Section */
 #project-metadata {
-  margin-top: 3em;
+  margin-top: 0em;
 }
 
 /*
@@ -403,7 +428,7 @@ ul.link-list .type {
 	font-size: 125%;
 	font-weight: bold;
 	color: #333;
-	background: url(images/brick.png) no-repeat left bottom;
+	background: url(images/method.png) no-repeat left bottom;
 }
 #documentation .method-heading a {
 	color: inherit;
@@ -425,7 +450,7 @@ ul.link-list .type {
 
 #documentation .method-alias .method-heading {
 	color: #666;
-	background: url(images/brick_link.png) no-repeat left bottom;
+	background: url(images/alias.png) no-repeat left bottom;
 }
 
 #documentation .method-description,
@@ -447,7 +472,7 @@ ul.link-list .type {
 }
 
 #documentation .attribute-method-heading {
-	background: url(images/tag_green.png) no-repeat left bottom;
+	background: url(images/attribute.png) no-repeat left bottom;
 }
 #documentation #attribute-method-details .method-detail:hover {
 	background-color: transparent;
@@ -475,34 +500,45 @@ a.source-toggle img {
 }
 
 div.method-source-code {
-    background: #262626;
-    color: #efefef;
-    margin: 1em;
-    padding: 0.5em;
-    border: 1px dashed #999;
-    overflow: hidden;
+  background: #262626;
+  background: #F6F6F6;
+  color: #2f2f2f;
+  margin: 1em;
+  padding: 0.5em;
+  border: 1px dashed #999;
+  overflow: hidden;
 }
 
 div.method-source-code pre {
 	background: inherit;
 	padding: 0;
-	color: white;
+	color: #222;
 	overflow: hidden;
 }
 
 /* @group Ruby keyword styles */
 
-.standalone-code { background: #221111; color: #ffdead; overflow: hidden; }
+.standalone-code { background: #221111; color: #22dead; overflow: hidden; }
 
-.ruby-constant  { color: #7fffd4; background: transparent; }
-.ruby-keyword { color: #00ffff; background: transparent; }
-.ruby-ivar    { color: #eedd82; background: transparent; }
-.ruby-operator  { color: #00ffee; background: transparent; }
+.ruby-constant   { color: #7fffd4; background: transparent; }
+.ruby-keyword    { color: #00ffff; background: transparent; }
+.ruby-ivar       { color: #eedd82; background: transparent; }
+.ruby-operator   { color: #00ffee; background: transparent; }
 .ruby-identifier { color: #ffdead; background: transparent; }
-.ruby-node    { color: #ffa07a; background: transparent; }
-.ruby-comment { color: #b22222; font-weight: bold; background: transparent; }
-.ruby-regexp  { color: #ffa07a; background: transparent; }
-.ruby-value   { color: #7fffd4; background: transparent; }
+.ruby-node       { color: #ffa07a; background: transparent; }
+.ruby-comment    { color: #b22222; background: transparent; font-weight: bold;}
+.ruby-regexp     { color: #ffa07a; background: transparent; }
+.ruby-value      { color: #7fffd4; background: transparent; }
+
+.ruby-constant   { color: #70004d; background: transparent; }
+.ruby-keyword    { color: #000000; background: transparent; font-weight: bold;}
+.ruby-ivar       { color: #11448e; background: transparent; }
+.ruby-operator   { color: #ff0022; background: transparent; }
+.ruby-identifier { color: #00413d; background: transparent; }
+.ruby-node       { color: #001f71; background: transparent; }
+.ruby-comment    { color: #bbbbbb; background: transparent; }
+.ruby-regexp     { color: #001f71; background: transparent; }
+.ruby-value      { color: #70004d; background: transparent; }
 
 /* @end */
 /* @end */

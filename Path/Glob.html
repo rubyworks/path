@@ -6,10 +6,10 @@
 <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-  <title>Module: Archive::Tar</title>
+  <title>Class: Path::Glob</title>
 
   
-    <link rel="SHORTCUT ICON" href="../images/module.png">
+    <link rel="SHORTCUT ICON" href="../images/class.png">
   
 
   <link type="text/css" media="screen" rel="stylesheet" href="../rdoc.css" />
@@ -20,15 +20,15 @@
   <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
 
 </head>
-<body class="module">
+<body class="class">
 
   <div class="head">
     <h1>
       
-        <img src="../images/module.png" align="absmiddle">&nbsp;
+        <img src="../images/class.png" align="absmiddle">&nbsp;
       
       <a href="../index.html">Path</a>&nbsp;
-      <a href="/">Archive::Tar</a>
+      <a href="/">Path::Glob</a>
     </h1>
   </div>
 
@@ -40,8 +40,8 @@
         <div class="section-body">
           <ul>
           
-            <li class="file"><a href="../vendor/path/minitar_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="vendor/path/minitar.rb">vendor/path/minitar.rb</a></li>
+            <li class="file"><a href="../lib/path/glob_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/path/glob.rb">lib/path/glob.rb</a></li>
           
           </ul>
         </div>
@@ -56,22 +56,29 @@
 
       <!-- Parent Class -->
       
-
-      <!-- Namespace Contents -->
-      
-      <div id="namespace-list-section" class="section">
-        <h3 class="section-header">Namespace</h3>
-        <ul class="link-list">
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        <ul>
           
-          <li class="module"><a href="Tar/Minitar.html">Archive::Tar::Minitar</a></li>
-          
-          <li class="module"><a href="Tar/PosixHeader.html">Archive::Tar::PosixHeader</a></li>
+          <li class="class">Name</li>
           
         </ul>
       </div>
       
 
+      <!-- Namespace Contents -->
+      
+
       <!-- Method Quickref -->
+      
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li class="method"><a href="#M000220">#to_s</a></li>
+          
+        </ul>
+      </div>
       
 
       <!-- Included Modules -->
@@ -196,10 +203,12 @@
 
     <div id="description">
       
-        <h1>Tar</h1>
-      
 
-      
+      <h1><a href="Glob.html">Glob</a></h1>
+<p>
+A lazy resolution variation of <a href="Name.html">Path::Name</a>.
+</p>
+
     </div>
 
     <!-- Constants -->
@@ -210,6 +219,44 @@
 
     <!-- Methods -->
     
+    <div id="public-instance-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="to-s-method" class="method-detail ">
+        <a name="M000220"></a>
+
+        <div class="method-heading">
+        
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        
+        </div>
+
+        <div class="method-description">
+          
+          <p class="missing-docs">(Not documented)</p>
+          
+
+          
+          <div class="method-source-code"
+            id="to-s-source">
+<pre>
+<span class="ruby-comment cmt"># File lib/path/glob.rb, line 10</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+      <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-keyword kw">super</span>).<span class="ruby-identifier">first</span>
+    <span class="ruby-keyword kw">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+    
+    </div>
+  
 
   </div>
 
