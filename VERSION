@@ -1,0 +1,6 @@
+name : path
+major: 1
+minor: 1
+patch: 0
+paths: [lib, vendor]
+
