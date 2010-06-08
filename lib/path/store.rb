@@ -2,6 +2,8 @@ require 'fileutils'
 
 module Path
 
+  # DEPRECATE: will move to Confectionery project.
+
   # TODO: I would like to remove the depth parameter,
   # which would be easy enough if we had a null/nack
   # object, ie. a type of nil that returns itself on

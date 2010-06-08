@@ -397,7 +397,9 @@ module Path
 
     def mkdir_p(dir, options={})
       dir = localize(dir)
-      fileutils.mkdir_p(dir, options)
+      unless File.directory?(dir)
+        fileutils.mkdir_p(dir, options)
+      end
     end
     alias_method :mkpath, :mkdir_p
 

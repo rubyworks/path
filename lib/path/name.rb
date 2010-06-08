@@ -978,8 +978,8 @@ module Path
       Dir.glob(::File.join(self.to_s, match), flags).collect{ |m| self.class.new(m) }
     end
 
-    #
-    def glob_first(match, *opts)
+    # Like #glob but returns the first match.
+    def first(match, *opts)
       flags = 0
       opts.each do |opt|
         case opt when Symbol, String
@@ -992,6 +992,26 @@ module Path
       file ? self.class.new(file) : nil
     end
 
+    # DEPRECATE
+    alias_method :glob_first, :first
+
+    # Like #glob but returns the last match.
+    def last(match, *opts)
+      flags = 0
+      opts.each do |opt|
+        case opt when Symbol, String
+          flags += ::File.const_get("FNM_#{opt}".upcase)
+        else
+          flags += opt
+        end
+      end
+      file = ::Dir.glob(::File.join(self.to_s, match), flags).last
+      file ? self.class.new(file) : nil
+    end
+
+    # DEPRECATE
+    alias_method :glob_last, :last
+
     #
     def empty?
       Dir.glob(::File.join(self.to_s, '*')).empty?
@@ -1000,7 +1020,6 @@ module Path
 
 
   class Path::Name    # * Find *
-    #
     # Path::Name#find is an iterator to traverse a directory tree in a depth first
     # manner.  It yields a Path::Name for each file under "this" directory.
     #
@@ -1010,6 +1029,11 @@ module Path
     # If +self+ is <tt>.</tt>, yielded pathnames begin with a filename in the
     # current directory, not <tt>./</tt>.
     #
+    # TODO: This is more like and #each method, though also like #descend. 
+    # I would rather use the method name #find in place of #first. This would be a
+    # non-compatability with Pathname, but I think an acceptable one. Need to
+    # compare #descend to #find. We may not even need both.
+
     def find(&block) # :yield: p
       require 'find'
       if @path == ['.']
