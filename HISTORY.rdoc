@@ -1,9 +1,10 @@
 = RELEASE HISTORY
 
-== 1.1.1 // 2010-01-07
+== 1.2.0 // 2010-01-07
 
-Minor point release attending to admin issues and
-a few light improvements.
+This release attends to some admin issues and a few
+light improvements. It also removes Path::Store which
+is being move to a new project.
 
 Changes:
 
