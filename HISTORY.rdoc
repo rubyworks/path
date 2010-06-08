@@ -1,5 +1,23 @@
 = RELEASE HISTORY
 
+== 1.1.1 // 2010-01-07
+
+Minor point release attending to admin issues and
+a few light improvements.
+
+Changes:
+
+* Add Path::Name#first and #last methods.
+* Fix Path::Name#amass method.
+
+
+== 1.1.0 // 2009-10-21
+
+Changes:
+
+* Added Path::Name#amass which a more flexible #glob like method.
+
+
 == 1.0.0 // 2009-09-22
 
 This is the initial stand-alone release of Path, a collection
