@@ -1,8 +1,7 @@
 --- 
 title  : Path
-suite  : rubyworks
-summary: Integrated set of a path-related libraries.
-license: MIT
+summary: Integrated set of a path-related libraries
+license: Apache 2.0
 authors: Thomas Sawyer
 created: 2009-09-22 
 
@@ -12,11 +11,14 @@ description:
   facility, Path::List and an isolated shell-evironment, Path::Shell.
 
 resources:
-  homepage   : http://rubyworks.github.com/path
-  development: http://github.com/rubyworks/path
-  mailinglist: http://googlegroups/group/rubyworks-mailinglist
-  repository : git://github.com/rubyworks/path.git
+  home: http://rubyworks.github.com/path
+  code: http://github.com/rubyworks/path
+  mail: http://groups.gooogle.com/group/rubyworks-mailinglist
 
-copyright:
-  Copyright (c) 2009 Thomas Sawyer
+repositories:
+  public: git://github.com/rubyworks/path.git
 
+organization: RubyWorks
+copyright   : Copyright (c) 2009 Thomas Sawyer
+
+loadpath: [lib, vendor]
